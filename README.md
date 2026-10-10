@@ -97,7 +97,7 @@ Elementele de interfață (butoane, mesaje, meniuri, regulile scurte din fiecare
 - Mia: Wikipedia, „Mia (game)" (ordinea 31 … 65, 11 … 66, 21; Mia contestată corect = 2 vieți). Aici anunțul trebuie să fie *strict* mai mare decât precedentul (unele surse acceptă „egal sau mai mare").
 - Big Pig (singur 1 = pierzi tura, dublu 1 = 25, alte duble = dublul sumei): descriere didactică folosită la cursuri de programare; nu există o regulă canonică.
 - Generala ibero-americană (valori citate în atlas): Wikipedia, „Generala".
-- Audit independent: regulile de mai sus au fost recitite de un al doilea agent; vezi `reports/Zaruri-fara-frontiere.AUDIT.md` (în spațiul de lucru al autorului).
+- Audit independent: regulile de mai sus au fost recitite de un al doilea agent;.
 
 ## Rulare locală
 
