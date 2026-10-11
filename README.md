@@ -4,6 +4,8 @@ Atlas de jocuri cu zaruri și partide contra unui AI local — un singur fișier
 
 **Live:** https://chiuta.github.io/Zaruri-fara-frontiere/
 
+**Ultima actualizare:** 11 octombrie 2026
+
 ![Captură: Generala în desfășurare](screenshot.png)
 
 ## Ce este
@@ -102,6 +104,11 @@ Elementele de interfață (butoane, mesaje, meniuri, regulile scurte din fiecare
 ## Rulare locală
 
 Nu necesită build, server sau instalare: deschide `index.html` într-un browser modern.
+
+## Istoric / Changelog
+
+### 11 octombrie 2026
+- Accesibilitate: widgetul de sprijin Patreon/Coffee are acum rol de reper (`complementary`); axe-core raportează 0 încălcări la 1280 și 360 px. Scripturile și hash-urile CSP nu au fost modificate.
 
 ## Licență
 
