@@ -21,7 +21,7 @@ Aceasta **nu este o aplicație de jocuri de noroc pe bani**: nu există mize rea
 - **Interfață în 7 limbi** (RO/EN/FR/IT/ES/PT/DE) cu comutator și autodetecție din `navigator.languages`; `lang` actualizat dinamic.
 - **Tastatură**: toate acțiunile au butoane accesibile cu Tab/Enter/Spațiu; scurtături pentru zaruri (R = aruncă, 1–5 = păstrează) unde se aplică; zone de atingere ≥ 44 px; focus vizibil; mesaje `aria-live`; aspect fără defilare orizontală la 390 px.
 - **Statistici locale** (victorii/înfrângeri/remize) în `localStorage`, doar dacă e disponibil; se pot șterge din Setări.
-- **Simulator**: notație `NdM`, `+/−`, constante (până la 1 000 000 000), `d%`, păstrează/elimină cele mai mari/mici (`kh/kl/dh/dl`), limite 100 zaruri / 1000 fețe / 12 termeni, istoric. Distribuția exactă se calculează doar pentru expresii cu interval ≤ 400 de valori și cost redus (altfel se afișează o notă, nu se blochează fila).
+- **Simulator**: notație `NdM`, `+/−`, constante (până la 1 000 000 000), `d%`, păstrează/elimină cele mai mari/mici (`kh/kl/dh/dl`), limite 100 zaruri / 1000 fețe / 12 termeni, istoric (ultimele 50 de aruncări, păstrat local). Distribuția exactă se calculează doar pentru expresii cu interval ≤ 400 de valori și cost redus (altfel se afișează o notă, nu se blochează fila).
 - **Analiză în simulator** (expresii cu distribuție exactă): interogare de probabilitate `P(S ≥ / ≤ / = v)` calculată din distribuția exactă (cu raport aproximativ 1 : x); buton „Simulează 10 000 aruncări” care compară media și frecvențele observate cu cele exacte; „Copiază istoricul”.
 - **Pluralizare** corectă în mesajele cu numere (ex. „1 aruncare” / „2 aruncări”) în cele 7 limbi.
 
@@ -77,7 +77,7 @@ Elementele de interfață (butoane, mesaje, meniuri, regulile scurte din fiecare
 ## Confidențialitate și rețea
 
 - Zero cereri de rețea: CSP strict `default-src 'none'`, `script-src` doar prin hash sha256 (3 scripturi inline), `style-src 'unsafe-inline'` (necesar pentru stilurile setate din interfață), `img-src data:`, fără `connect-src`. Nu există `fetch`, `eval` sau `innerHTML` (verificat prin căutare în fișierul livrat).
-- `localStorage` doar în `try/catch` (limbă, animație, seed, statistici); aplicația merge și fără el.
+- `localStorage` doar în `try/catch` (limbă, animație, seed, statistici, istoricul simulatorului — ultimele 50 de aruncări; se șterge din Setări); aplicația merge și fără el.
 - Singurele legături externe sunt în subsol/colțul paginii: Patreon, Buy Me a Coffee și GitHub, cu `rel="noopener"`.
 - Fără cont, fără cookie-uri, fără analiză.
 
@@ -107,6 +107,9 @@ Elementele de interfață (butoane, mesaje, meniuri, regulile scurte din fiecare
 Nu necesită build, server sau instalare: deschide `index.html` într-un browser modern.
 
 ## Istoric / Changelog
+
+### 11 octombrie 2026 (a treia trecere)
+- Simulator: rezultatul detaliat este fără ambiguitate (`4d6kh3 [2, 4, 3, 4] → [3, 4, 4] = 11  ·  + 2`; constantele nu mai apar ca „= 2”); istoricul aruncărilor se păstrează local între sesiuni (ultimele 50, validat la citire, șters din Setări → date). CSP: hash-uri recalculate.
 
 ### 11 octombrie 2026 (a doua trecere)
 - Simulator: probabilitate `P(S ≥/≤/= v)` din distribuția exactă, simulare de 10 000 aruncări cu comparație observat/exact, copiere istoric (texte noi în 7 limbi); titlurile distribuției trecute la `h3` (ordine corectă a titlurilor); CSP: hash-uri recalculate.

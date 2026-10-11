@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-XuahPxfuN4GsAhmbu22wcTyXk9mcUMiyJffV8MPut3g=' 'sha256-bPB1IRhkJEwdCThXQj0p9CqCq9y8U+DJLW+Mr7uJJHQ=' 'sha256-irlU51+z2rx5+NelyaNECkUe3zygz75Q6zCCLSHLdNs='; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-XuahPxfuN4GsAhmbu22wcTyXk9mcUMiyJffV8MPut3g=' 'sha256-p2+OgNzQ5X3zRrWleOcque1IiV8rPbUKVkM0LIzTdoY=' 'sha256-cX2SR2hkR4w1D7TAHM/lIpwWrkQaY5CXa9TCLVVx7u0='; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <title>Zaruri fără frontiere — atlas de jocuri cu zaruri</title>
 <meta name="description" content="Atlas de jocuri cu zaruri cu jocuri jucabile contra AI local: Generala, 10000, Zarul mincinos, Craps, Pig și altele. Offline, fără telemetrie.">
@@ -1849,7 +1849,7 @@ const T = {
   s_seed_off: ['Activ: crypto.getRandomValues cu rejection sampling (fără bias modulo).', 'Active: crypto.getRandomValues with rejection sampling (no modulo bias).', 'Actif : crypto.getRandomValues avec échantillonnage par rejet (sans biais de modulo).', 'Attivo: crypto.getRandomValues con rejection sampling (senza bias del modulo).', 'Activo: crypto.getRandomValues con muestreo por rechazo (sin sesgo de módulo).', 'Ativo: crypto.getRandomValues com amostragem por rejeição (sem viés de módulo).', 'Aktiv: crypto.getRandomValues mit Rejection Sampling (ohne Modulo-Verzerrung).'],
   s_seed_note: ['Un seed face zarurile previzibile — folosește-l doar pentru studiu și verificare. Se aplică la următoarea partidă.', 'A seed makes the dice predictable — use it only for study and verification. It applies from the next game.', 'Une graine rend les dés prévisibles — à utiliser seulement pour l\'étude et la vérification. Valable dès la prochaine partie.', 'Un seed rende i dadi prevedibili — usalo solo per studio e verifica. Vale dalla prossima partita.', 'Una semilla hace los dados predecibles — úsala solo para estudio y verificación. Se aplica desde la próxima partida.', 'Uma semente torna os dados previsíveis — use-a só para estudo e verificação. Aplica-se a partir do próximo jogo.', 'Ein Seed macht die Würfel vorhersehbar — nur zum Lernen und Prüfen verwenden. Gilt ab dem nächsten Spiel.'],
   s_data: ['Date locale', 'Local data', 'Données locales', 'Dati locali', 'Datos locales', 'Dados locais', 'Lokale Daten'],
-  s_data_note: ['Se păstrează în browser (localStorage), doar dacă este disponibil: limba, animația, seed-ul și statisticile tale. Nimic nu pleacă din dispozitiv.', 'Kept in the browser (localStorage), only if available: language, animation, seed and your statistics. Nothing leaves the device.', 'Conservées dans le navigateur (localStorage), si disponible : langue, animation, graine et statistiques. Rien ne quitte l\'appareil.', 'Conservati nel browser (localStorage), se disponibile: lingua, animazione, seed e statistiche. Nulla lascia il dispositivo.', 'Guardados en el navegador (localStorage), si está disponible: idioma, animación, semilla y estadísticas. Nada sale del dispositivo.', 'Guardados no navegador (localStorage), se disponível: idioma, animação, semente e estatísticas. Nada sai do dispositivo.', 'Im Browser gespeichert (localStorage), falls verfügbar: Sprache, Animation, Seed und Statistik. Nichts verlässt das Gerät.'],
+  s_data_note: ['Se păstrează în browser (localStorage), doar dacă este disponibil: limba, animația, seed-ul, statisticile tale și istoricul aruncărilor din simulator. Nimic nu pleacă din dispozitiv.', 'Kept in the browser (localStorage), only if available: language, animation, seed, your statistics and the simulator roll history. Nothing leaves the device.', 'Conservées dans le navigateur (localStorage), si disponible : langue, animation, graine, statistiques et historique des lancers du simulateur. Rien ne quitte l\'appareil.', 'Conservati nel browser (localStorage), se disponibile: lingua, animazione, seed, statistiche e cronologia dei lanci del simulatore. Nulla lascia il dispositivo.', 'Guardados en el navegador (localStorage), si está disponible: idioma, animación, semilla, estadísticas e historial de tiradas del simulador. Nada sale del dispositivo.', 'Guardados no navegador (localStorage), se disponível: idioma, animação, semente, estatísticas e histórico de lançamentos do simulador. Nada sai do dispositivo.', 'Im Browser gespeichert (localStorage), falls verfügbar: Sprache, Animation, Seed, Statistik und Würfelverlauf des Simulators. Nichts verlässt das Gerät.'],
   s_data_clear: ['Șterge datele locale', 'Delete local data', 'Effacer les données locales', 'Cancella i dati locali', 'Borrar datos locales', 'Apagar dados locais', 'Lokale Daten löschen'],
   s_keys: ['Tastatură', 'Keyboard', 'Clavier', 'Tastiera', 'Teclado', 'Teclado', 'Tastatur'],
   s_keys_note: ['Toate acțiunile de joc au butoane accesibile cu Tab/Enter/Spațiu. Scurtături: R = aruncă, 1–6 = alege/păstrează zaruri, K = păstrează, B = depune (10000), H = depune (Pig), S = oprește (zaruri de poker).', 'All game actions have buttons reachable with Tab/Enter/Space. Shortcuts: R = roll, 1–6 = select/hold dice, K = keep, B = bank (10000), H = hold (Pig), S = stop (poker dice).', 'Toutes les actions ont des boutons accessibles par Tab/Entrée/Espace. Raccourcis : R = lancer, 1–6 = choisir/garder des dés, K = garder, B = encaisser (10000), H = encaisser (Pig), S = stop (dés de poker).', 'Tutte le azioni hanno pulsanti raggiungibili con Tab/Invio/Spazio. Scorciatoie: R = lancia, 1–6 = scegli/tieni dadi, K = tieni, B = incassa (10000), H = incassa (Pig), S = stop (dadi da poker).', 'Todas las acciones tienen botones accesibles con Tab/Intro/Espacio. Atajos: R = lanzar, 1–6 = elegir/guardar dados, K = guardar, B = plantarse (10000), H = plantarse (Pig), S = parar (dados de póker).', 'Todas as ações têm botões acessíveis com Tab/Enter/Espaço. Atalhos: R = lançar, 1–6 = escolher/manter dados, K = manter, B = guardar (10000), H = guardar (Pig), S = parar (dados de póquer).', 'Alle Aktionen haben Schaltflächen per Tab/Enter/Leertaste. Kürzel: R = würfeln, 1–6 = Würfel wählen/halten, K = behalten, B = sichern (10000), H = sichern (Pig), S = Stopp (Pokerwürfel).']
@@ -2156,13 +2156,14 @@ function loadStore() {
         if (/^[a-z0-9]{2,16}$/.test(k) && s && typeof s === 'object') App.store.stats[k] = { w: s.w | 0, l: s.l | 0, d: s.d | 0, best: Number(s.best) || 0 };
       });
     }
+    if (Array.isArray(o.hist)) App.simHist = o.hist.filter(function (h) { return typeof h === 'string' && h.length <= 300; }).slice(0, 50);
     App.langSaved = LANGS.indexOf(o.lang) >= 0;
   } catch (e) { /* fără stocare: aplicația merge oricum */ }
 }
 function saveStore() {
-  try { window.localStorage.setItem('zff', JSON.stringify({ lang: App.lang, motion: App.motion, seed: App.seed, stats: App.store.stats })); } catch (e) { /* ignorat */ }
+  try { window.localStorage.setItem('zff', JSON.stringify({ lang: App.lang, motion: App.motion, seed: App.seed, stats: App.store.stats, hist: (App.simHist || []).slice(0, 50) })); } catch (e) { /* ignorat */ }
 }
-function clearStore() { try { window.localStorage.removeItem('zff'); } catch (e) { /* ignorat */ } App.store = { stats: {} }; }
+function clearStore() { try { window.localStorage.removeItem('zff'); } catch (e) { /* ignorat */ } App.store = { stats: {} }; App.simHist = []; }
 function bump(game, what, score) {
   const s = App.store.stats[game] || (App.store.stats[game] = { w: 0, l: 0, d: 0, best: 0 });
   if (what === 'w') s.w++; else if (what === 'l') s.l++; else if (what === 'd') s.d++;
@@ -2465,7 +2466,7 @@ function init() {
   try { window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', applyMotion); } catch (e) { /* ignorat */ }
 }
 
-window.ZFF_UI = { el: el, svg: svg, $: $, clear: clear, t: t, L: L, Lneeds: Lneeds, later: later, onKey: onKey, bump: bump, dieEl: dieEl, dieSVG: dieSVG, rollAnim: rollAnim, makeLog: makeLog, field: field, select: select, faceName: faceName, reduced: reduced, show: show, openGame: openGame, init: init, GAMES: GAMES, App: App, normText: normText, applyLang: applyLang, stopTimers: stopTimers, leaveGame: leaveGame };
+window.ZFF_UI = { save: saveStore, el: el, svg: svg, $: $, clear: clear, t: t, L: L, Lneeds: Lneeds, later: later, onKey: onKey, bump: bump, dieEl: dieEl, dieSVG: dieSVG, rollAnim: rollAnim, makeLog: makeLog, field: field, select: select, faceName: faceName, reduced: reduced, show: show, openGame: openGame, init: init, GAMES: GAMES, App: App, normText: normText, applyLang: applyLang, stopTimers: stopTimers, leaveGame: leaveGame };
 })();
 
 /* ===== INTERFAȚĂ: Generala + 10000/Farkle ===== */
@@ -3365,9 +3366,10 @@ GAMES.poker = {
 'use strict';
 const Z = window.ZFF, U = window.ZFF_UI;
 const el = U.el, t = U.t, clear = U.clear;
-const hist = []; let lastText = '2d6+3', lastRes = null, lastErr = null, qty = 1;
+const hist = (Array.isArray(U.App.simHist) ? U.App.simHist : []).slice(0, 50); function persistHist() { U.App.simHist = hist.slice(0, 50); U.save(); } let lastText = '2d6+3', lastRes = null, lastErr = null, qty = 1;
 
 function render() {
+  hist.length = 0; Array.prototype.push.apply(hist, Array.isArray(U.App.simHist) ? U.App.simHist : []); /* resincronizare (ex. după „Șterge datele”) */
   const box = clear(U.$('#sim-box'));
   const input = el('input', { type: 'text', id: 'sim-expr', value: lastText, maxlength: 120, autocomplete: 'off', spellcheck: 'false', 'aria-describedby': 'sim-help' });
   const out = el('div', { role: 'status', 'aria-live': 'polite', id: 'sim-out' });
@@ -3387,7 +3389,7 @@ function render() {
       });
     });
     out.appendChild(dice);
-    out.appendChild(el('p', { class: 'muted', text: lastRes.parts.map(function (pt) { return (pt.sign < 0 ? '−' : '+') + pt.term + (pt.rolls.length ? ' [' + pt.rolls.join(', ') + ']' + (pt.kept.length !== pt.rolls.length ? ' → [' + pt.kept.join(', ') + ']' : '') : '') + ' = ' + pt.sum; }).join('  ') }));
+    out.appendChild(el('p', { class: 'muted', text: lastRes.parts.map(function (pt, pi) { const sg = pt.sign < 0 ? (pi ? '− ' : '−') : (pi ? '+ ' : ''); if (!pt.rolls.length) return sg + pt.term; return sg + pt.term + ' [' + pt.rolls.join(', ') + ']' + (pt.kept.length !== pt.rolls.length ? ' → [' + pt.kept.join(', ') + ']' : '') + ' = ' + pt.sum; }).join('  ·  ') }));
   }
   function roll(text) {
     lastText = text; input.value = text;
@@ -3395,7 +3397,7 @@ function render() {
     if (r.error) { lastErr = r.error; lastRes = null; show(); drawChart(); return; }
     lastErr = null; lastRes = r; show(); drawChart();
     hist.unshift(r.text + ' → ' + r.total + '  [' + r.parts.filter(function (p) { return p.rolls.length; }).map(function (p) { return p.rolls.join(','); }).join(' | ') + ']');
-    if (hist.length > 50) hist.pop(); drawHist();
+    if (hist.length > 50) hist.pop(); persistHist(); drawHist();
   }
   function drawHist() { clear(list); hist.forEach(function (h) { list.appendChild(el('li', { text: h })); }); }
   function drawChart() {
@@ -3447,7 +3449,7 @@ function render() {
     el('p', { class: 'muted', id: 'sim-help', text: t('sim_help') }),
     el('div', { class: 'row' }, el('label', { for: 'sim-qty', text: t('sim_qty') }), qtyIn, presets),
     ex, out, chart));
-  box.appendChild(el('div', { class: 'panel' }, el('div', { class: 'row sp' }, el('h3', { text: t('sim_hist') }), el('span', { class: 'row' }, el('button', { type: 'button', class: 'btn', onclick: function (ev) { const b = ev.currentTarget, txt = hist.join('\n'); function ok() { const o = b.textContent; b.textContent = t('sim_copied'); setTimeout(function () { b.textContent = o; }, 1200); } if (hist.length && navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(ok, function () {}); } }, t('sim_copy')), el('button', { type: 'button', class: 'btn', onclick: function () { hist.length = 0; drawHist(); } }, t('sim_clear')))), list));
+  box.appendChild(el('div', { class: 'panel' }, el('div', { class: 'row sp' }, el('h3', { text: t('sim_hist') }), el('span', { class: 'row' }, el('button', { type: 'button', class: 'btn', onclick: function (ev) { const b = ev.currentTarget, txt = hist.join('\n'); function ok() { const o = b.textContent; b.textContent = t('sim_copied'); setTimeout(function () { b.textContent = o; }, 1200); } if (hist.length && navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(ok, function () {}); } }, t('sim_copy')), el('button', { type: 'button', class: 'btn', onclick: function () { hist.length = 0; persistHist(); drawHist(); } }, t('sim_clear')))), list));
   input.addEventListener('keydown', function (ev) { if (ev.key === 'Enter') { ev.preventDefault(); roll(input.value); } });
   show(); drawChart(); drawHist();
 }
