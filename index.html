@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-XuahPxfuN4GsAhmbu22wcTyXk9mcUMiyJffV8MPut3g=' 'sha256-epT0aa5MvDbx/gE9j3MlK+JBOG0CBxRhmT9n76GBKfE=' 'sha256-sPzSovSBu/029oo/Je8ttFIuFuZITFwvbA03o/5vSGY='; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-XuahPxfuN4GsAhmbu22wcTyXk9mcUMiyJffV8MPut3g=' 'sha256-bPB1IRhkJEwdCThXQj0p9CqCq9y8U+DJLW+Mr7uJJHQ=' 'sha256-irlU51+z2rx5+NelyaNECkUe3zygz75Q6zCCLSHLdNs='; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <title>Zaruri fără frontiere — atlas de jocuri cu zaruri</title>
 <meta name="description" content="Atlas de jocuri cu zaruri cu jocuri jucabile contra AI local: Generala, 10000, Zarul mincinos, Craps, Pig și altele. Offline, fără telemetrie.">
@@ -1816,6 +1816,13 @@ const T = {
   sim_total: ['Total: {v}', 'Total: {v}', 'Total : {v}', 'Totale: {v}', 'Total: {v}', 'Total: {v}', 'Summe: {v}'],
   sim_dropped: ['eliminat', 'dropped', 'écarté', 'scartato', 'descartado', 'descartado', 'verworfen'],
   sim_hist: ['Istoric', 'History', 'Historique', 'Cronologia', 'Historial', 'Histórico', 'Verlauf'],
+  sim_pq: ['Probabilitate pentru suma S', 'Probability for the sum S', 'Probabilité pour la somme S', 'Probabilità per la somma S', 'Probabilidad para la suma S', 'Probabilidade para a soma S', 'Wahrscheinlichkeit für die Summe S'],
+  sim_batch: ['Simulează 10 000 aruncări', 'Simulate 10,000 rolls', 'Simuler 10 000 lancers', 'Simula 10.000 lanci', 'Simular 10 000 tiradas', 'Simular 10 000 lançamentos', '10.000 Würfe simulieren'],
+  sim_batch_res: ['Media observată {o} față de media exactă {e} (n = {n}).', 'Observed mean {o} vs exact mean {e} (n = {n}).', 'Moyenne observée {o} contre moyenne exacte {e} (n = {n}).', 'Media osservata {o} contro media esatta {e} (n = {n}).', 'Media observada {o} frente a la media exacta {e} (n = {n}).', 'Média observada {o} contra média exata {e} (n = {n}).', 'Beobachteter Mittelwert {o} gegenüber exaktem Mittelwert {e} (n = {n}).'],
+  sim_batch_obs: ['Media observată {o} (n = {n}).', 'Observed mean {o} (n = {n}).', 'Moyenne observée {o} (n = {n}).', 'Media osservata {o} (n = {n}).', 'Media observada {o} (n = {n}).', 'Média observada {o} (n = {n}).', 'Beobachteter Mittelwert {o} (n = {n}).'],
+  sim_obs: ['Frecvențe observate', 'Observed frequencies', 'Fréquences observées', 'Frequenze osservate', 'Frecuencias observadas', 'Frequências observadas', 'Beobachtete Häufigkeiten'],
+  sim_copy: ['Copiază istoricul', 'Copy history', 'Copier l\'historique', 'Copia cronologia', 'Copiar historial', 'Copiar histórico', 'Verlauf kopieren'],
+  sim_copied: ['Copiat.', 'Copied.', 'Copié.', 'Copiato.', 'Copiado.', 'Copiado.', 'Kopiert.'],
   sim_clear: ['Șterge istoricul', 'Clear history', 'Effacer l\'historique', 'Cancella cronologia', 'Borrar historial', 'Limpar histórico', 'Verlauf löschen'],
   sim_dist: ['Distribuție exactă', 'Exact distribution', 'Distribution exacte', 'Distribuzione esatta', 'Distribución exacta', 'Distribuição exata', 'Exakte Verteilung'],
   sim_dist_note: ['Interval {a}–{b}, media {m}.', 'Range {a}–{b}, mean {m}.', 'Plage {a}–{b}, moyenne {m}.', 'Intervallo {a}–{b}, media {m}.', 'Rango {a}–{b}, media {m}.', 'Intervalo {a}–{b}, média {m}.', 'Bereich {a}–{b}, Mittelwert {m}.'],
@@ -3401,8 +3408,32 @@ function render() {
     let mean = 0, mx = 0; keys.forEach(function (k) { mean += k * dist.get(k); mx = Math.max(mx, dist.get(k)); });
     const bars = el('div', { class: 'histbar', role: 'img', 'aria-label': t('sim_chart_alt', { a: keys[0], b: keys[keys.length - 1], m: mean.toFixed(2) }) });
     keys.forEach(function (k) { const i = el('i', { title: k + ': ' + (100 * dist.get(k)).toFixed(2) + '%' }); i.style.height = Math.max(2, Math.round(100 * dist.get(k) / mx)) + '%'; bars.appendChild(i); });
-    chart.appendChild(el('h4', { text: t('sim_dist') })); chart.appendChild(bars);
+    chart.appendChild(el('h3', { text: t('sim_dist') })); chart.appendChild(bars);
     chart.appendChild(el('p', { class: 'muted', text: t('sim_dist_note', { a: keys[0], b: keys[keys.length - 1], m: mean.toFixed(2) }) }));
+    /* interogare de probabilitate: P(S ≥ / ≤ / = v) din distribuția exactă */
+    const pv = el('input', { type: 'number', id: 'sim-pv', step: 1, value: Math.round(mean), style: 'width:6em;min-height:44px;background:#0d0a08;border:1px solid #54421f;border-radius:10px;color:#e8e0d0;padding:0 8px', 'aria-label': t('sim_pq') });
+    const pc = el('select', { id: 'sim-pc', 'aria-label': t('sim_pq'), style: 'min-height:44px;background:#0d0a08;border:1px solid #54421f;border-radius:10px;color:#e8e0d0;padding:0 8px' }, el('option', { value: 'ge' }, '≥'), el('option', { value: 'le' }, '≤'), el('option', { value: 'eq' }, '='));
+    const pr = el('p', { class: 'muted', id: 'sim-pr', role: 'status', 'aria-live': 'polite' });
+    function updP() {
+      const v = Number(pv.value); if (!isFinite(v)) { pr.textContent = ''; return; }
+      let pp = 0; keys.forEach(function (k) { if (pc.value === 'ge' ? k >= v : pc.value === 'le' ? k <= v : k === v) pp += dist.get(k); });
+      pr.textContent = 'P(S ' + (pc.value === 'ge' ? '≥' : pc.value === 'le' ? '≤' : '=') + ' ' + v + ') = ' + (100 * pp).toFixed(2) + ' %' + (pp > 0 && pp < 1 ? '  (≈ 1 : ' + (1 / pp).toFixed(1) + ')' : '');
+    }
+    pv.addEventListener('input', updP); pc.addEventListener('change', updP);
+    chart.appendChild(el('div', { class: 'row' }, el('label', { for: 'sim-pv', text: t('sim_pq') }), pc, pv)); chart.appendChild(pr); updP();
+    /* simulare în lot: frecvențe observate vs. distribuția exactă */
+    const bres = el('p', { class: 'muted', id: 'sim-bres', role: 'status', 'aria-live': 'polite' }), bout = el('div', { id: 'sim-bobs' });
+    chart.appendChild(el('div', { class: 'row' }, el('button', { type: 'button', class: 'btn', id: 'sim-batch', onclick: function () { runBatch(keys, dist, mean, mx, bres, bout); } }, t('sim_batch'))));
+    chart.appendChild(bres); chart.appendChild(bout);
+  }
+  function runBatch(keys, dist, mean, mx, bres, bout) {
+    const N = 10000, rng = U.App.getRng(), cnt = new Map(); let sum = 0;
+    for (let i = 0; i < N; i++) { const r = Z.rollNotation(lastText, rng); if (r.error) return; sum += r.total; cnt.set(r.total, (cnt.get(r.total) || 0) + 1); }
+    bres.textContent = t('sim_batch_res', { o: (sum / N).toFixed(2), e: mean.toFixed(2), n: N.toLocaleString() });
+    clear(bout);
+    const bars = el('div', { class: 'histbar', role: 'img', 'aria-label': t('sim_obs') });
+    keys.forEach(function (k) { const f = (cnt.get(k) || 0) / N, i = el('i', { title: k + ': ' + (100 * f).toFixed(2) + '%' }); i.style.height = Math.max(2, Math.round(100 * f / mx)) + '%'; bars.appendChild(i); });
+    bout.appendChild(el('h3', { text: t('sim_obs') })); bout.appendChild(bars);
   }
   const qtyIn = el('input', { type: 'number', id: 'sim-qty', min: 1, max: 100, value: qty, style: 'width:5em;min-height:44px;background:#0d0a08;border:1px solid #54421f;border-radius:10px;color:#e8e0d0;padding:0 8px', 'aria-label': t('sim_qty') });
   qtyIn.addEventListener('change', function () { qty = Math.max(1, Math.min(100, parseInt(qtyIn.value, 10) || 1)); qtyIn.value = qty; });
@@ -3416,7 +3447,7 @@ function render() {
     el('p', { class: 'muted', id: 'sim-help', text: t('sim_help') }),
     el('div', { class: 'row' }, el('label', { for: 'sim-qty', text: t('sim_qty') }), qtyIn, presets),
     ex, out, chart));
-  box.appendChild(el('div', { class: 'panel' }, el('div', { class: 'row sp' }, el('h3', { text: t('sim_hist') }), el('button', { type: 'button', class: 'btn', onclick: function () { hist.length = 0; drawHist(); } }, t('sim_clear'))), list));
+  box.appendChild(el('div', { class: 'panel' }, el('div', { class: 'row sp' }, el('h3', { text: t('sim_hist') }), el('span', { class: 'row' }, el('button', { type: 'button', class: 'btn', onclick: function (ev) { const b = ev.currentTarget, txt = hist.join('\n'); function ok() { const o = b.textContent; b.textContent = t('sim_copied'); setTimeout(function () { b.textContent = o; }, 1200); } if (hist.length && navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(ok, function () {}); } }, t('sim_copy')), el('button', { type: 'button', class: 'btn', onclick: function () { hist.length = 0; drawHist(); } }, t('sim_clear')))), list));
   input.addEventListener('keydown', function (ev) { if (ev.key === 'Enter') { ev.preventDefault(); roll(input.value); } });
   show(); drawChart(); drawHist();
 }
