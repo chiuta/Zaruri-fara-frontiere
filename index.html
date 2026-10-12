@@ -2,8 +2,10 @@
 <html lang="ro">
 <head>
 <meta charset="UTF-8">
+<meta name="application-version" content="1.0.0">
+<meta name="last-updated" content="2026-10-12">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-XuahPxfuN4GsAhmbu22wcTyXk9mcUMiyJffV8MPut3g=' 'sha256-p2+OgNzQ5X3zRrWleOcque1IiV8rPbUKVkM0LIzTdoY=' 'sha256-cX2SR2hkR4w1D7TAHM/lIpwWrkQaY5CXa9TCLVVx7u0='; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-XuahPxfuN4GsAhmbu22wcTyXk9mcUMiyJffV8MPut3g=' 'sha256-Lo8/QR1A7pcuIvA9929CW8fIw0tz+lNfV4JJSqjRv5U=' 'sha256-cX2SR2hkR4w1D7TAHM/lIpwWrkQaY5CXa9TCLVVx7u0='; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <title>Zaruri fără frontiere — atlas de jocuri cu zaruri</title>
 <meta name="description" content="Atlas de jocuri cu zaruri cu jocuri jucabile contra AI local: Generala, 10000, Zarul mincinos, Craps, Pig și altele. Offline, fără telemetrie.">
@@ -228,6 +230,7 @@ dl.rules dd{margin:.2em 0 0 0}
   <p data-i="foot_priv"></p>
   <p data-i="foot_marks"></p>
   <p><a href="https://github.com/chiuta/Zaruri-fara-frontiere" target="_blank" rel="noopener noreferrer">GitHub · Zaruri-fara-frontiere</a></p>
+  <p id="app-version"><span data-i="ver_lbl">Versiune</span> v 1.0.0 · 2026-10-12</p>
 </footer>
 </div>
 <!-- tf-donate: sprijin voluntar (Patreon + Buy Me a Coffee) — self-contained, fără resurse externe, fără JS -->
@@ -1499,6 +1502,7 @@ const T = {
   warn_gambling: ['⚠ Aceasta nu este o aplicație de jocuri de noroc pe bani: nu există mize reale, depuneri sau câștiguri. Craps folosește doar jetoane virtuale fără valoare. Dacă jocurile de noroc îți provoacă probleme, caută sprijin specializat.', '⚠ This is not a real-money gambling app: there are no real stakes, deposits or winnings. Craps uses only worthless virtual chips. If gambling causes you problems, seek professional support.', '⚠ Ce n\'est pas une application de jeux d\'argent : aucune mise, aucun dépôt ni gain réels. Le Craps n\'utilise que des jetons virtuels sans valeur. Si le jeu vous pose problème, cherchez de l\'aide spécialisée.', '⚠ Questa non è un\'app di gioco d\'azzardo con denaro reale: nessuna puntata, deposito o vincita reale. Il Craps usa solo gettoni virtuali senza valore. Se il gioco ti crea problemi, cerca un supporto specializzato.', '⚠ Esta no es una aplicación de juego con dinero real: no hay apuestas, depósitos ni ganancias reales. El Craps usa solo fichas virtuales sin valor. Si el juego te causa problemas, busca ayuda especializada.', '⚠ Esta não é uma aplicação de jogo a dinheiro: não há apostas, depósitos nem ganhos reais. O Craps usa apenas fichas virtuais sem valor. Se o jogo lhe causa problemas, procure apoio especializado.', '⚠ Dies ist keine Glücksspiel-App um echtes Geld: keine echten Einsätze, Einzahlungen oder Gewinne. Craps verwendet nur wertlose virtuelle Chips. Wenn Glücksspiel Probleme verursacht, such dir fachliche Hilfe.'],
   foot_priv: ['Fără rețea, fără telemetrie, fără cont. Doar preferințele (limbă, statistici) pot fi păstrate local, în browser.', 'No network, no telemetry, no account. Only preferences (language, statistics) may be kept locally in the browser.', 'Pas de réseau, pas de télémétrie, pas de compte. Seules les préférences (langue, statistiques) peuvent être conservées localement dans le navigateur.', 'Nessuna rete, nessuna telemetria, nessun account. Solo le preferenze (lingua, statistiche) possono essere conservate localmente nel browser.', 'Sin red, sin telemetría, sin cuenta. Solo las preferencias (idioma, estadísticas) pueden guardarse localmente en el navegador.', 'Sem rede, sem telemetria, sem conta. Apenas as preferências (idioma, estatísticas) podem ser guardadas localmente no navegador.', 'Kein Netzwerk, keine Telemetrie, kein Konto. Nur Einstellungen (Sprache, Statistik) können lokal im Browser gespeichert werden.'],
   foot_marks: ['Numele comerciale citate (de ex. Yahtzee®, Perudo®) aparțin proprietarilor lor; aplicația nu este afiliată.', 'Trade names cited (e.g. Yahtzee®, Perudo®) belong to their owners; this app is not affiliated.', 'Les noms commerciaux cités (p. ex. Yahtzee®, Perudo®) appartiennent à leurs propriétaires ; l\'application n\'est pas affiliée.', 'I nomi commerciali citati (es. Yahtzee®, Perudo®) appartengono ai rispettivi proprietari; l\'app non è affiliata.', 'Los nombres comerciales citados (p. ej. Yahtzee®, Perudo®) pertenecen a sus propietarios; la aplicación no está afiliada.', 'Os nomes comerciais citados (p. ex. Yahtzee®, Perudo®) pertencem aos seus proprietários; a aplicação não é afiliada.', 'Genannte Handelsnamen (z. B. Yahtzee®, Perudo®) gehören ihren Inhabern; die App ist nicht affiliiert.'],
+  ver_lbl: ['Versiune', 'Version', 'Version', 'Versione', 'Versión', 'Versão', 'Version'],
   /* ---- generic joc ---- */
   you: ['Tu', 'You', 'Toi', 'Tu', 'Tú', 'Você', 'Du'],
   ai_n: ['AI {n}', 'AI {n}', 'IA {n}', 'IA {n}', 'IA {n}', 'IA {n}', 'KI {n}'],

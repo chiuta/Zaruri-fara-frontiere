@@ -1,10 +1,10 @@
 # Zaruri fără frontiere
 
+**Versiune:** 1.0.0 · **Ultima actualizare:** 12 octombrie 2026
+
 Atlas de jocuri cu zaruri și partide contra unui AI local — un singur fișier HTML, offline, fără dependențe, fără telemetrie.
 
 **Live:** https://chiuta.github.io/Zaruri-fara-frontiere/
-
-**Ultima actualizare:** 11 octombrie 2026
 
 ![Captură: Generala în desfășurare](screenshot.png)
 
@@ -107,6 +107,9 @@ Elementele de interfață (butoane, mesaje, meniuri, regulile scurte din fiecare
 Nu necesită build, server sau instalare: deschide `index.html` într-un browser modern.
 
 ## Istoric / Changelog
+
+### 12 octombrie 2026 — versiunea 1.0.0
+- 1.0.0 — 2026-10-12: versiunea și data ultimei actualizări sunt afișate în aplicație
 
 ### 11 octombrie 2026 (a treia trecere)
 - Simulator: rezultatul detaliat este fără ambiguitate (`4d6kh3 [2, 4, 3, 4] → [3, 4, 4] = 11  ·  + 2`; constantele nu mai apar ca „= 2”); istoricul aruncărilor se păstrează local între sesiuni (ultimele 50, validat la citire, șters din Setări → date). CSP: hash-uri recalculate.
