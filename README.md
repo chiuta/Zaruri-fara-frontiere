@@ -1,6 +1,6 @@
 # Zaruri fără frontiere
 
-**Versiune:** 1.0.0 · **Ultima actualizare:** 12 octombrie 2026
+**Versiune:** 1.1.0 · **Ultima actualizare:** 14 octombrie 2026
 
 Atlas de jocuri cu zaruri și partide contra unui AI local — un singur fișier HTML, offline, fără dependențe, fără telemetrie.
 
@@ -107,6 +107,9 @@ Elementele de interfață (butoane, mesaje, meniuri, regulile scurte din fiecare
 Nu necesită build, server sau instalare: deschide `index.html` într-un browser modern.
 
 ## Istoric / Changelog
+
+### 1.1.0 — 2026-10-14
+- Copie de rezervă și etichetare date (fff-kit).
 
 ### 12 octombrie 2026 — versiunea 1.0.0
 - 1.0.0 — 2026-10-12: versiunea și data ultimei actualizări sunt afișate în aplicație
