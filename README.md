@@ -78,7 +78,7 @@ Elementele de interfață (butoane, mesaje, meniuri, regulile scurte din fiecare
 
 - Zero cereri de rețea: CSP strict `default-src 'none'`, `script-src` doar prin hash sha256 (3 scripturi inline), `style-src 'unsafe-inline'` (necesar pentru stilurile setate din interfață), `img-src data:`, fără `connect-src`. Nu există `fetch`, `eval` sau `innerHTML` (verificat prin căutare în fișierul livrat).
 - `localStorage` doar în `try/catch` (limbă, animație, seed, statistici, istoricul simulatorului — ultimele 50 de aruncări; se șterge din Setări); aplicația merge și fără el.
-- Singurele legături externe sunt în subsol/colțul paginii: Patreon, Buy Me a Coffee și GitHub, cu `rel="noopener"`.
+- Singurele legături externe sunt în subsol/colțul paginii: Buy Me a Coffee și GitHub, cu `rel="noopener"`.
 - Fără cont, fără cookie-uri, fără analiză.
 
 ## Limite și avertismente
@@ -121,7 +121,7 @@ Nu necesită build, server sau instalare: deschide `index.html` într-un browser
 - Simulator: probabilitate `P(S ≥/≤/= v)` din distribuția exactă, simulare de 10 000 aruncări cu comparație observat/exact, copiere istoric (texte noi în 7 limbi); titlurile distribuției trecute la `h3` (ordine corectă a titlurilor); CSP: hash-uri recalculate.
 
 ### 11 octombrie 2026
-- Accesibilitate: widgetul de sprijin Patreon/Coffee are acum rol de reper (`complementary`); axe-core raportează 0 încălcări la 1280 și 360 px. Scripturile și hash-urile CSP nu au fost modificate.
+- Accesibilitate: widgetul de sprijin Buy Me a Coffee are acum rol de reper (`complementary`); axe-core raportează 0 încălcări la 1280 și 360 px. Scripturile și hash-urile CSP nu au fost modificate.
 
 ## Licență
 
