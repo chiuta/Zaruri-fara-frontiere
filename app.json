@@ -7,11 +7,16 @@
   "description": "Atlas de jocuri cu zaruri cu jocuri jucabile contra AI local: Generala, 10000, Zarul mincinos, Craps, Pig și altele. Offline, fără telemetrie.",
   "egress": [],
   "permissions": [
-    "serviceWorker"
+    "clipboard",
+    "serviceWorker",
+    "localStorage",
+    "Web Crypto"
   ],
-  "storageKeys": [],
-  "sizeBytes": 107689,
-  "sha256": "9416afa64c099d129d52c0e55786c6ccc4c6f7b97350fdcbc73a76a429e8be98",
+  "storageKeys": [
+    "zff"
+  ],
+  "sizeBytes": 406362,
+  "sha256": "e085ad04e22d88488f278d941509133c0ecf12c1e123001ce60bfa74955bac08",
   "csp": {
     "present": true,
     "directives": {
