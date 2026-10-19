@@ -1,136 +1,138 @@
 # Zaruri fără frontiere
 
-**Versiune:** 1.1.0 · **Ultima actualizare:** 14 octombrie 2026
+**English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-Atlas de jocuri cu zaruri și partide contra unui AI local — un singur fișier HTML, offline, fără dependențe, fără telemetrie.
+**Version:** 1.1.0 · **Last updated:** 2026-10-14
+
+An atlas of dice games and matches against a local AI — a single HTML file, offline, with no dependencies and no telemetry.
 
 **Live:** https://chiuta.github.io/Zaruri-fara-frontiere/
 
-![Captură: Generala în desfășurare](screenshot.png)
+![Screenshot: a game of Generala in progress](screenshot.png)
 
-## Ce este
+## What it is
 
-Un atlas de 26 de fișe de jocuri cu zaruri, din care **12 sunt jucabile** contra unui AI local (motor didactic, nu model de limbaj) și 14 sunt **doar în atlas** (descrise, nu implementate). Plus un simulator de zaruri generic. Totul rulează în browser, dintr-un singur `index.html`.
+An atlas of 26 dice-game entries, of which **12 are playable** against a local AI (a didactic engine, not a language model) and 14 are **atlas-only** (described, not implemented). Plus a generic dice simulator. Everything runs in the browser, from a single `index.html`.
 
-Aceasta **nu este o aplicație de jocuri de noroc pe bani**: nu există mize reale, depuneri sau câștiguri. Craps folosește doar jetoane virtuale.
+This is **not a real-money gambling app**: there are no real stakes, deposits or winnings. Craps uses virtual chips only.
 
-## Funcții (verificate în cod și în teste)
+## Features (verified in the code and in tests)
 
-- **Zaruri**: `crypto.getRandomValues` cu *rejection sampling* (fără bias modulo). Opțional, un *seed* (mulberry32) pentru partide reproductibile — atunci zarurile sunt previzibile, iar aplicația o spune.
-- **Zaruri SVG mari**, cu puncte și `aria-label` cu valoarea; animația de aruncare respectă `prefers-reduced-motion` și un comutator din Setări.
-- **Interfață în 7 limbi** (RO/EN/FR/IT/ES/PT/DE) cu comutator și autodetecție din `navigator.languages`; `lang` actualizat dinamic.
-- **Tastatură**: toate acțiunile au butoane accesibile cu Tab/Enter/Spațiu; scurtături pentru zaruri (R = aruncă, 1–5 = păstrează) unde se aplică; zone de atingere ≥ 44 px; focus vizibil; mesaje `aria-live`; aspect fără defilare orizontală la 390 px.
-- **Statistici locale** (victorii/înfrângeri/remize) în `localStorage`, doar dacă e disponibil; se pot șterge din Setări.
-- **Simulator**: notație `NdM`, `+/−`, constante (până la 1 000 000 000), `d%`, păstrează/elimină cele mai mari/mici (`kh/kl/dh/dl`), limite 100 zaruri / 1000 fețe / 12 termeni, istoric (ultimele 50 de aruncări, păstrat local). Distribuția exactă se calculează doar pentru expresii cu interval ≤ 400 de valori și cost redus (altfel se afișează o notă, nu se blochează fila).
-- **Analiză în simulator** (expresii cu distribuție exactă): interogare de probabilitate `P(S ≥ / ≤ / = v)` calculată din distribuția exactă (cu raport aproximativ 1 : x); buton „Simulează 10 000 aruncări” care compară media și frecvențele observate cu cele exacte; „Copiază istoricul”.
-- **Pluralizare** corectă în mesajele cu numere (ex. „1 aruncare” / „2 aruncări”) în cele 7 limbi.
+- **Dice**: `crypto.getRandomValues` with *rejection sampling* (no modulo bias). Optionally, a *seed* (mulberry32) for reproducible games — in which case the dice are predictable, and the app says so.
+- **Large SVG dice**, with pips and an `aria-label` with the value; the rolling animation respects `prefers-reduced-motion` and a switch in Settings.
+- **Interface in 7 languages** (RO/EN/FR/IT/ES/PT/DE) with a switch and autodetection from `navigator.languages`; `lang` updated dynamically.
+- **Keyboard**: all actions have buttons reachable with Tab/Enter/Space; shortcuts for dice (R = roll, 1–5 = keep) where applicable; touch targets ≥ 44 px; visible focus; `aria-live` messages; layout without horizontal scrolling at 390 px.
+- **Local statistics** (wins/losses/draws) in `localStorage`, only if available; they can be deleted from Settings.
+- **Simulator**: `NdM` notation, `+/−`, constants (up to 1,000,000,000), `d%`, keep/drop highest/lowest (`kh/kl/dh/dl`), limits of 100 dice / 1000 faces / 12 terms, history (the last 50 rolls, kept locally). The exact distribution is computed only for expressions with a range ≤ 400 values and low cost (otherwise a note is shown, the tab is not blocked).
+- **Analysis in the simulator** (expressions with an exact distribution): probability query `P(S ≥ / ≤ / = v)` computed from the exact distribution (with an approximate 1 : x ratio); a "Simulate 10,000 rolls" button that compares the observed mean and frequencies with the exact ones; "Copy history".
+- Correct **pluralisation** in messages with numbers (e.g. "1 roll" / "2 rolls") in the 7 languages.
 
-## Variante
+## Variants
 
-| Variantă | Jucabil? | ⚠ Aproximări / ce lipsește |
+| Variant | Playable? | ⚠ Approximations / what is missing |
 |---|---|---|
-| Generala (reguli de tip „Yahtzee®", marcă Hasbro) | da, 2–4 jucători | ⚠ Numele „Generala" desemnează și jocul ibero-american, cu alt punctaj (scară 20, full 30, poker 40, generala 50; fișă separată, doar în atlas). Aici: punctaj de tip Yahtzee, bonus 35 la ≥ 63, bonus 100 doar dacă „Generala" = 50, regula jokerului oficială (forțată). Fără variante regionale. |
-| 10000 (Farkle) | da, 2–4 | Nu există reguli canonice: preset „clasic" (doar 1, 5, trei egale; 4/5/6 egale dublează), prag de intrare și țintă configurabile, tură finală opțională. |
-| Greed (variantă) | da | Doar presetul „combinații" (scară 1–6 și trei perechi = 1500); NU este o regulă canonică „Greed". |
-| Perudo (zarul mincinos) | da, 2–5 | Alegeri documentate: palifico doar cu ≥ 3 jucători, calza permisă, deschiderea rundei cu 1-uri (jokeri) interzisă (exceptând palifico sau un singur zar), pierzătorul deschide runda următoare (după o „calza" deschide cel care a spus-o). |
-| Zarul mincinos (clasic) | da, 2–5 | Varianta minimă: fără jokeri, fără calza, fără palifico. |
-| Mia (Meyer) | da, 2–4 | Reguli casnice variabile; varianta „pasezi cupa nevăzută" NU este implementată; anunțuri strict crescătoare; Mia contestată corect costă 2 vieți. |
-| Craps | da, 1 jucător | Pass / Don't pass / Come / Don't come și odds la cote adevărate (limite 1×, 2×, 3×, 5×, 10×, 3-4-5×). NU: Place, Field, Hardways, propoziții; pariurile nu se retrag; odds la Come oprite la „come-out"; 12 = egal la Don't. |
-| Pig | da | — (AI optim calculat local, Pig la 100) |
-| Big Pig | da | Variantă: un singur 1 = pierzi tura; dublu 1 = 25; alte duble = dublul sumei. Nu există o variantă canonică. |
-| Chicago | da, 2–4 | Doar varianta simplă (11 runde, ținta 2–12); fără versiuni cu mize. Joc de noroc pur. |
-| Tăbliță (Shut the box) | da, tu contra AI | Rundă = o tură; 3/5/7 runde, se adună plăcuțele rămase; regula „un zar" optională/obligatorie/niciodată. |
-| Zaruri de poker | da, tu contra AI | Mâini 9–A, până la 3 aruncări; departajare pe tip, apoi pe fețele grupurilor; egal = remiză. |
-| Generala argentiniană, Yacht, Yatzy | doar în atlas | Valori nesursate unic; regulile variază. |
-| Hazard, Sic Bo, Cee-lo, Ship-Captain-Crew, Crown & Anchor, Bunco, Barbut, Skunk, Pass the Pigs, zaruri neranzitive, zaruri de rol | doar în atlas | Rezumate; „Pass the Pigs" nu poate fi simulat fără probabilități măsurate; Barbut are reguli nesigure. |
+| Generala (rules of the "Yahtzee®" type, a Hasbro trademark) | yes, 2–4 players | ⚠ The name "Generala" also designates the Ibero-American game, with different scoring (straight 20, full house 30, poker 40, generala 50; a separate entry, atlas-only). Here: Yahtzee-type scoring, 35 bonus at ≥ 63, 100 bonus only if "Generala" = 50, official joker rule (forced). No regional variants. |
+| 10000 (Farkle) | yes, 2–4 | There are no canonical rules: "classic" preset (only 1s, 5s, three of a kind; 4/5/6 of a kind double), configurable entry threshold and target, optional final turn. |
+| Greed (variant) | yes | Only the "combinations" preset (straight 1–6 and three pairs = 1500); this is NOT a canonical "Greed" rule. |
+| Perudo (liar's dice) | yes, 2–5 | Documented choices: palifico only with ≥ 3 players, calza allowed, opening a round with 1s (jokers) forbidden (except palifico or a single die), the loser opens the next round (after a "calza" the one who called it opens). |
+| Liar's dice (classic) | yes, 2–5 | The minimal variant: no jokers, no calza, no palifico. |
+| Mia (Meyer) | yes, 2–4 | House rules vary; the variant "you pass the unseen cup" is NOT implemented; strictly increasing announcements; a correctly challenged Mia costs 2 lives. |
+| Craps | yes, 1 player | Pass / Don't pass / Come / Don't come and odds at true odds (limits 1×, 2×, 3×, 5×, 10×, 3-4-5×). NOT: Place, Field, Hardways, proposition bets; bets cannot be taken down; Come odds are off on the come-out; 12 = push on Don't. |
+| Pig | yes | — (optimal AI computed locally, Pig to 100) |
+| Big Pig | yes | Variant: a single 1 = you lose the turn; double 1 = 25; other doubles = double the sum. There is no canonical variant. |
+| Chicago | yes, 2–4 | Only the simple variant (11 rounds, target 2–12); no versions with stakes. Pure game of chance. |
+| Shut the box | yes, you against the AI | A round = one turn; 3/5/7 rounds, the remaining tiles are added up; the "one die" rule optional/mandatory/never. |
+| Poker dice | yes, you against the AI | Hands 9–A, up to 3 rolls; tie-break by type, then by the faces of the groups; equal = draw. |
+| Argentine Generala, Yacht, Yatzy | atlas-only | Values not uniquely sourced; the rules vary. |
+| Hazard, Sic Bo, Cee-lo, Ship-Captain-Crew, Crown & Anchor, Bunco, Barbut, Skunk, Pass the Pigs, nontransitive dice, role-playing dice | atlas-only | Summaries; "Pass the Pigs" cannot be simulated without measured probabilities; Barbut has uncertain rules. |
 
-## AI — ce este și ce nu este
+## AI — what it is and what it is not
 
-Nu este un model de limbaj. Sunt motoare didactice, fiecare descris onest în fișa jocului:
+It is not a language model. They are didactic engines, each honestly described in the game's entry:
 
-- **Generala**: expectimax exact peste cele 252 de multiseturi de zaruri și tabelele de re-aruncare, plus o estimare simplă a „costului de oportunitate" al categoriei (parametri reglați empiric: scor mediu ≈ 241,5 în 300+ partide AI vs AI; nu este optim).
-- **10000/Greed**: euristică (șansa de Farkle și câștigul așteptat prin enumerare, depune la praguri fixe). Nu este optim.
-- **Perudo/Zarul mincinos**: probabilități binomiale din propriile zaruri + numărul total de zaruri + istoricul licitațiilor, decizie după valoarea așteptată. În teste nu alege niciodată „calza".
-- **Mia**: heuristică simplă; poate minți.
-- **Pig/Big Pig**: politică optimă calculată în browser prin iterație de valori (câteva secunde la prima pornire, cu bară de progres).
-- **Tăbliță**: programare dinamică exactă peste cele 512 stări ale plăcuțelor.
-- **Zaruri de poker**: politică exactă prin tabele de tranziție.
-- **Chicago/Craps**: fără AI de decizie (noroc).
+- **Generala**: exact expectimax over the 252 dice multisets and the re-roll tables, plus a simple estimate of the category's "opportunity cost" (empirically tuned parameters: average score ≈ 241.5 over 300+ AI vs AI games; it is not optimal).
+- **10000/Greed**: heuristic (the chance of a Farkle and the expected gain by enumeration, banks at fixed thresholds). It is not optimal.
+- **Perudo/Liar's dice**: binomial probabilities from its own dice + the total number of dice + the bidding history, decision by expected value. In tests it never chooses "calza".
+- **Mia**: simple heuristic; it can lie.
+- **Pig/Big Pig**: optimal policy computed in the browser by value iteration (a few seconds on first start, with a progress bar).
+- **Shut the box**: exact dynamic programming over the 512 tile states.
+- **Poker dice**: exact policy through transition tables.
+- **Chicago/Craps**: no decision AI (luck).
 
-**AI-ul nu trișează.** Nu vede zarurile ascunse ale altora (Perudo, Mia) și nu cunoaște viitoarele aruncări. Pentru Perudo există un test care permută zarurile adversarilor și verifică că decizia AI-ului rămâne identică. Nu există bară de „dificultate": nu există niveluri.
+**The AI does not cheat.** It does not see the hidden dice of others (Perudo, Mia) and does not know future rolls. For Perudo there is a test that permutes the opponents' dice and checks that the AI's decision stays identical. There is no "difficulty" bar: there are no levels.
 
-## Manual de utilizare
+## User guide
 
-1. Deschide `index.html` (dublu clic sau din pagina Live).
-2. În **Atlas** răsfoiești fișele; filtrele și căutarea restrâng lista. „Reguli și note" se deschide pe fișă.
-3. Apasă **▶ Joacă** pe o fișă jucabilă (sau alege din fila **Joacă**), setează opțiunile și apasă **Începe**.
-4. Pe tura ta: aruncă (R), alege zarurile de păstrat (1–5) și categoria/acțiunea. Un mesaj `aria-live` anunță ce s-a întâmplat.
-5. **Simulator**: scrie `2d6+3` și apasă Aruncă.
-6. **Setări**: animație, seed (opțional), ștergerea datelor locale.
+1. Open `index.html` (double-click or from the Live page).
+2. In **Atlas** you browse the entries; the filters and search narrow the list. "Rules and notes" opens on the entry.
+3. Press **▶ Play** on a playable entry (or choose from the **Play** tab), set the options and press **Start**.
+4. On your turn: roll (R), choose the dice to keep (1–5) and the category/action. An `aria-live` message announces what happened.
+5. **Simulator**: type `2d6+3` and press Roll.
+6. **Settings**: animation, seed (optional), deleting local data.
 
-Notă: schimbarea limbii în timpul unui joc **repornește** jocul curent.
+Note: changing the language during a game **restarts** the current game.
 
-## Limbi
+## Languages
 
-Elementele de interfață (butoane, mesaje, meniuri, regulile scurte din fiecare joc) sunt în toate cele 7 limbi. **Textele lungi din atlas (reguli, origini, note ⚠, descrierea AI, secțiunea Despre) există doar în română și engleză**; în FR/IT/ES/PT/DE se afișează textul în engleză, marcat `lang="en"`, cu o notă discretă „text în engleză". Un test verifică paritatea cheilor i18n și a substituțiilor `{…}` între cele 7 limbi.
+The interface elements (buttons, messages, menus, the short rules of each game) are in all 7 languages. **The long texts in the atlas (rules, origins, ⚠ notes, the AI description, the About section) exist only in Romanian and English**; in FR/IT/ES/PT/DE the text is displayed in English, marked `lang="en"`, with a discreet "text in English" note. A test checks the parity of the i18n keys and of the `{…}` substitutions across the 7 languages.
 
-## Confidențialitate și rețea
+## Privacy and network
 
-- Zero cereri de rețea: CSP strict `default-src 'none'`, `script-src` doar prin hash sha256 (3 scripturi inline), `style-src 'unsafe-inline'` (necesar pentru stilurile setate din interfață), `img-src data:`, fără `connect-src`. Nu există `fetch`, `eval` sau `innerHTML` (verificat prin căutare în fișierul livrat).
-- `localStorage` doar în `try/catch` (limbă, animație, seed, statistici, istoricul simulatorului — ultimele 50 de aruncări; se șterge din Setări); aplicația merge și fără el.
-- Singurele legături externe sunt în subsol/colțul paginii: Buy Me a Coffee și GitHub, cu `rel="noopener"`.
-- Fără cont, fără cookie-uri, fără analiză.
+- Zero network requests: strict CSP `default-src 'none'`, `script-src` only by sha256 hash (3 inline scripts), `style-src 'unsafe-inline'` (needed for styles set from the interface), `img-src data:`, no `connect-src`. There is no `fetch`, `eval` or `innerHTML` (checked by searching the delivered file).
+- `localStorage` only inside `try/catch` (language, animation, seed, statistics, the simulator history — the last 50 rolls; deleted from Settings); the app also works without it.
+- The only external links are in the footer/corner of the page: Buy Me a Coffee and GitHub, with `rel="noopener"`.
+- No account, no cookies, no analytics.
 
-## Limite și avertismente
+## Limits and warnings
 
-- Nu este joc de noroc pe bani; jetoanele din Craps sunt virtuale.
-- Numele comerciale citate (Yahtzee®, Perudo®, Pass the Pigs®, Kniffel®) aparțin proprietarilor; aplicația nu este afiliată. Titlurile folosesc nume tradiționale/generice; „Perudo” și „Farkle” sunt însă folosite și comercial de alți producători (păstrarea lor în titlu este o decizie a autorului).
-- Variantele marcate ⚠ sunt aproximări sau alegeri documentate, nu „regula oficială".
-- Pig: calculul politicii optime durează câteva secunde pe telefoane lente.
-- Neimplementat: simboluri alternative pentru daltonism (zarurile folosesc puncte, nu culori, pentru valoare), mod „arată zarurile AI".
-- Testele automate sunt în spațiul de lucru al autorului, nu în pachet (vezi raportul).
+- It is not a real-money gambling game; the chips in Craps are virtual.
+- The commercial names cited (Yahtzee®, Perudo®, Pass the Pigs®, Kniffel®) belong to their owners; the app is not affiliated. The titles use traditional/generic names; "Perudo" and "Farkle" are, however, also used commercially by other producers (keeping them in the title is the author's decision).
+- Variants marked ⚠ are approximations or documented choices, not "the official rule".
+- Pig: computing the optimal policy takes a few seconds on slow phones.
+- Not implemented: alternative symbols for colour-blindness (the dice use pips, not colours, for the value), a "show the AI's dice" mode.
+- The automated tests are in the author's workspace, not in the package (see the report).
 
-## Surse
+## Sources
 
-- Reguli Yahtzee/Generala (categorii, bonus 35, bonus 100, regula jokerului oficială): Wikipedia, „Yahtzee" (verificat în această sesiune) și regulile publicate de producător (din memorie; nu comparate cu textul oficial).
-- Pig optim (≈ 53,06% pentru primul jucător la 100): lucrarea „Optimal Play of the Dice Game Pig" (The UMAP Journal, 2004); valoarea a fost reprodusă prin calcul propriu în teste (în toleranță 0,0006).
-- Liar's dice / Perudo, Mia, Pig, Craps, Shut the box, Farkle: articole Wikipedia respective și descrieri de reguli de joc; regulile exacte variază și variantele alese sunt listate mai sus.
-- Craps: probabilitatea pass-line 244/495 verificată prin calcul exact și simulare; cotele adevărate 2:1 / 3:2 / 6:5 (și 1:2 / 2:3 / 5:6 pentru „lay") și 3-4-5× conform Wikipedia, „Craps".
-- Perudo/Dudo (ordinea ofertelor, 1-uri jokeri, palifico, calza, deschidere): Wikipedia, „Dudo"; regulament Perudo publicat pe rulespal.com.
-- Mia: Wikipedia, „Mia (game)" (ordinea 31 … 65, 11 … 66, 21; Mia contestată corect = 2 vieți). Aici anunțul trebuie să fie *strict* mai mare decât precedentul (unele surse acceptă „egal sau mai mare").
-- Big Pig (singur 1 = pierzi tura, dublu 1 = 25, alte duble = dublul sumei): descriere didactică folosită la cursuri de programare; nu există o regulă canonică.
-- Generala ibero-americană (valori citate în atlas): Wikipedia, „Generala".
-- Audit independent: regulile de mai sus au fost recitite de un al doilea agent;.
+- Yahtzee/Generala rules (categories, 35 bonus, 100 bonus, official joker rule): Wikipedia, "Yahtzee" (checked in this session) and the rules published by the manufacturer (from memory; not compared with the official text).
+- Optimal Pig (≈ 53.06% for the first player at 100): the paper "Optimal Play of the Dice Game Pig" (The UMAP Journal, 2004); the value was reproduced by our own computation in the tests (within a tolerance of 0.0006).
+- Liar's dice / Perudo, Mia, Pig, Craps, Shut the box, Farkle: the respective Wikipedia articles and game-rule descriptions; the exact rules vary and the chosen variants are listed above.
+- Craps: the pass-line probability 244/495 verified by exact calculation and simulation; true odds 2:1 / 3:2 / 6:5 (and 1:2 / 2:3 / 5:6 for "lay") and 3-4-5× according to Wikipedia, "Craps".
+- Perudo/Dudo (order of bids, 1s as jokers, palifico, calza, opening): Wikipedia, "Dudo"; Perudo rules published on rulespal.com.
+- Mia: Wikipedia, "Mia (game)" (order 31 … 65, 11 … 66, 21; a correctly challenged Mia = 2 lives). Here the announcement must be *strictly* greater than the previous one (some sources accept "equal or greater").
+- Big Pig (a single 1 = you lose the turn, double 1 = 25, other doubles = double the sum): a didactic description used in programming courses; there is no canonical rule.
+- Ibero-American Generala (values cited in the atlas): Wikipedia, "Generala".
+- Independent audit: the rules above were re-read by a second agent;.
 
-## Rulare locală
+## Running locally
 
-Nu necesită build, server sau instalare: deschide `index.html` într-un browser modern.
+It needs no build, server or installation: open `index.html` in a modern browser.
 
-## Istoric / Changelog
+## History / Changelog
 
 ### 1.1.0 — 2026-10-14
-- Copie de rezervă și etichetare date (fff-kit).
+- Backup and data labelling (fff-kit).
 
-### 12 octombrie 2026 — versiunea 1.0.0
-- 1.0.0 — 2026-10-12: versiunea și data ultimei actualizări sunt afișate în aplicație
+### 12 October 2026 — version 1.0.0
+- 1.0.0 — 2026-10-12: the version and the date of the last update are shown in the app
 
-### 11 octombrie 2026 (a treia trecere)
-- Simulator: rezultatul detaliat este fără ambiguitate (`4d6kh3 [2, 4, 3, 4] → [3, 4, 4] = 11  ·  + 2`; constantele nu mai apar ca „= 2”); istoricul aruncărilor se păstrează local între sesiuni (ultimele 50, validat la citire, șters din Setări → date). CSP: hash-uri recalculate.
+### 11 October 2026 (third pass)
+- Simulator: the detailed result is unambiguous (`4d6kh3 [2, 4, 3, 4] → [3, 4, 4] = 11  ·  + 2`; constants no longer appear as "= 2"); the roll history is kept locally between sessions (the last 50, validated on reading, deleted from Settings → data). CSP: hashes recalculated.
 
-### 11 octombrie 2026 (a doua trecere)
-- Simulator: probabilitate `P(S ≥/≤/= v)` din distribuția exactă, simulare de 10 000 aruncări cu comparație observat/exact, copiere istoric (texte noi în 7 limbi); titlurile distribuției trecute la `h3` (ordine corectă a titlurilor); CSP: hash-uri recalculate.
+### 11 October 2026 (second pass)
+- Simulator: probability `P(S ≥/≤/= v)` from the exact distribution, simulation of 10,000 rolls with an observed/exact comparison, history copy (new texts in 7 languages); the distribution headings moved to `h3` (correct heading order); CSP: hashes recalculated.
 
-### 11 octombrie 2026
-- Accesibilitate: widgetul de sprijin Buy Me a Coffee are acum rol de reper (`complementary`); axe-core raportează 0 încălcări la 1280 și 360 px. Scripturile și hash-urile CSP nu au fost modificate.
+### 11 October 2026
+- Accessibility: the Buy Me a Coffee support widget now has a landmark role (`complementary`); axe-core reports 0 violations at 1280 and 360 px. The scripts and the CSP hashes were not modified.
 
-## Licență
+## License
 
-MIT — vezi fișierul LICENSE.
+MIT — see the LICENSE file.
 
-## Autor
+## Author
 
 Alexandru-Ionuț Chiuță (Alexio).
 
-## English summary
+## Summary
 
 A single-file, offline dice-game atlas with 26 entries; 12 are playable against a local, non-LLM AI (Generala, 10000/Farkle, Greed variant, Perudo, classic Liar's dice, Mia, Craps with virtual chips, Pig, Big Pig, Chicago, Shut the box, Poker dice) and the rest are atlas-only. Dice use `crypto.getRandomValues` with rejection sampling (optional seed). No network (strict CSP), no telemetry, not real-money gambling. UI in 7 languages; long rule texts exist in Romanian and English only (other languages show English). The AI does not cheat. Variants marked ⚠ are approximations or documented house choices. Licence: MIT (see LICENSE).
