@@ -10,7 +10,7 @@ Atlas de jogos de dados e partidas contra uma IA local — um único ficheiro HT
 
 **Online:** https://chiuta.github.io/Zaruri-fara-frontiere/
 
-![Captura: uma partida de Generala em curso](screenshot.png)
+![Captura: uma partida de Generala em curso](screenshot.pt.png)
 
 ## O que é
 

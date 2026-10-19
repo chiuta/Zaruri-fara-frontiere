@@ -10,7 +10,7 @@ Ein Atlas von Würfelspielen und Partien gegen eine lokale KI — eine einzige H
 
 **Online:** https://chiuta.github.io/Zaruri-fara-frontiere/
 
-![Screenshot: eine laufende Partie Generala](screenshot.png)
+![Screenshot: eine laufende Partie Generala](screenshot.de.png)
 
 ## Was es ist
 

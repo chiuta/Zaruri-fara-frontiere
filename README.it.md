@@ -10,7 +10,7 @@ Atlante di giochi di dadi e partite contro un'IA locale — un unico file HTML, 
 
 **Online:** https://chiuta.github.io/Zaruri-fara-frontiere/
 
-![Schermata: una partita a Generala in corso](screenshot.png)
+![Schermata: una partita a Generala in corso](screenshot.it.png)
 
 ## Che cos'è
 

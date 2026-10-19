@@ -10,7 +10,7 @@ Atlas de jocuri cu zaruri și partide contra unui AI local — un singur fișier
 
 **Live:** https://chiuta.github.io/Zaruri-fara-frontiere/
 
-![Captură: Generala în desfășurare](screenshot.png)
+![Captură: Generala în desfășurare](screenshot.ro.png)
 
 ## Ce este
 

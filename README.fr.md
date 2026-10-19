@@ -10,7 +10,7 @@ Atlas de jeux de dés et parties contre une IA locale — un seul fichier HTML, 
 
 **En ligne :** https://chiuta.github.io/Zaruri-fara-frontiere/
 
-![Capture : une partie de Generala en cours](screenshot.png)
+![Capture : une partie de Generala en cours](screenshot.fr.png)
 
 ## De quoi s'agit-il
 

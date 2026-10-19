@@ -10,7 +10,7 @@ An atlas of dice games and matches against a local AI — a single HTML file, of
 
 **Live:** https://chiuta.github.io/Zaruri-fara-frontiere/
 
-![Screenshot: a game of Generala in progress](screenshot.png)
+![Screenshot: a game of Generala in progress](screenshot.en.png)
 
 ## What it is
 

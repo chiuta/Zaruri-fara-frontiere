@@ -10,7 +10,7 @@ Kockajátékok atlasza és játszmák egy helyi mesterséges intelligencia ellen
 
 **Élő változat:** https://chiuta.github.io/Zaruri-fara-frontiere/
 
-![Képernyőkép: egy folyamatban lévő Generala-játszma](screenshot.png)
+![Képernyőkép: egy folyamatban lévő Generala-játszma](screenshot.hu.png)
 
 ## Mi ez
 
