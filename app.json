@@ -15,8 +15,8 @@
   "storageKeys": [
     "zff"
   ],
-  "sizeBytes": 406362,
-  "sha256": "e085ad04e22d88488f278d941509133c0ecf12c1e123001ce60bfa74955bac08",
+  "sizeBytes": 406998,
+  "sha256": "075d6fccb270ddb593fd79791b66ce0283b9a932be00a098396197b3644e17c5",
   "csp": {
     "present": true,
     "directives": {
@@ -47,7 +47,7 @@
     ]
   },
   "kit": {
-    "version": "1.0.0",
+    "version": "1.1.1",
     "modules": [
       "core",
       "label",
