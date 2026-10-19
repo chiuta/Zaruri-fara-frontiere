@@ -2,7 +2,9 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.1.0 · **Last updated:** 2026-10-14
+**Version:** 1.2.0 · **Last updated:** 2026-10-19
+
+Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 An atlas of dice games and matches against a local AI — a single HTML file, offline, with no dependencies and no telemetry.
 
@@ -20,12 +22,12 @@ This is **not a real-money gambling app**: there are no real stakes, deposits or
 
 - **Dice**: `crypto.getRandomValues` with *rejection sampling* (no modulo bias). Optionally, a *seed* (mulberry32) for reproducible games — in which case the dice are predictable, and the app says so.
 - **Large SVG dice**, with pips and an `aria-label` with the value; the rolling animation respects `prefers-reduced-motion` and a switch in Settings.
-- **Interface in 7 languages** (RO/EN/FR/IT/ES/PT/DE) with a switch and autodetection from `navigator.languages`; `lang` updated dynamically.
+- **Interface in 8 languages** (RO/EN/FR/IT/ES/PT/DE/HU) with a switch and autodetection from `navigator.languages`; `lang` updated dynamically.
 - **Keyboard**: all actions have buttons reachable with Tab/Enter/Space; shortcuts for dice (R = roll, 1–5 = keep) where applicable; touch targets ≥ 44 px; visible focus; `aria-live` messages; layout without horizontal scrolling at 390 px.
 - **Local statistics** (wins/losses/draws) in `localStorage`, only if available; they can be deleted from Settings.
 - **Simulator**: `NdM` notation, `+/−`, constants (up to 1,000,000,000), `d%`, keep/drop highest/lowest (`kh/kl/dh/dl`), limits of 100 dice / 1000 faces / 12 terms, history (the last 50 rolls, kept locally). The exact distribution is computed only for expressions with a range ≤ 400 values and low cost (otherwise a note is shown, the tab is not blocked).
 - **Analysis in the simulator** (expressions with an exact distribution): probability query `P(S ≥ / ≤ / = v)` computed from the exact distribution (with an approximate 1 : x ratio); a "Simulate 10,000 rolls" button that compares the observed mean and frequencies with the exact ones; "Copy history".
-- Correct **pluralisation** in messages with numbers (e.g. "1 roll" / "2 rolls") in the 7 languages.
+- Correct **pluralisation** in messages with numbers (e.g. "1 roll" / "2 rolls") in the 8 languages.
 
 ## Variants
 
@@ -74,7 +76,7 @@ Note: changing the language during a game **restarts** the current game.
 
 ## Languages
 
-The interface elements (buttons, messages, menus, the short rules of each game) are in all 7 languages. **The long texts in the atlas (rules, origins, ⚠ notes, the AI description, the About section) exist only in Romanian and English**; in FR/IT/ES/PT/DE the text is displayed in English, marked `lang="en"`, with a discreet "text in English" note. A test checks the parity of the i18n keys and of the `{…}` substitutions across the 7 languages.
+The interface elements (buttons, messages, menus, the short rules of each game) are in all 8 languages. **The long texts in the atlas (rules, origins, ⚠ notes, the AI description, the About section) exist only in Romanian and English**; in FR/IT/ES/PT/DE/HU the text is displayed in English, marked `lang="en"`, with a discreet "text in English" note. A test checks the parity of the i18n keys and of the `{…}` substitutions across the 8 languages.
 
 ## Privacy and network
 
@@ -135,4 +137,4 @@ Alexandru-Ionuț Chiuță (Alexio).
 
 ## Summary
 
-A single-file, offline dice-game atlas with 26 entries; 12 are playable against a local, non-LLM AI (Generala, 10000/Farkle, Greed variant, Perudo, classic Liar's dice, Mia, Craps with virtual chips, Pig, Big Pig, Chicago, Shut the box, Poker dice) and the rest are atlas-only. Dice use `crypto.getRandomValues` with rejection sampling (optional seed). No network (strict CSP), no telemetry, not real-money gambling. UI in 7 languages; long rule texts exist in Romanian and English only (other languages show English). The AI does not cheat. Variants marked ⚠ are approximations or documented house choices. Licence: MIT (see LICENSE).
+A single-file, offline dice-game atlas with 26 entries; 12 are playable against a local, non-LLM AI (Generala, 10000/Farkle, Greed variant, Perudo, classic Liar's dice, Mia, Craps with virtual chips, Pig, Big Pig, Chicago, Shut the box, Poker dice) and the rest are atlas-only. Dice use `crypto.getRandomValues` with rejection sampling (optional seed). No network (strict CSP), no telemetry, not real-money gambling. UI in 8 languages; long rule texts exist in Romanian and English only (other languages show English). The AI does not cheat. Variants marked ⚠ are approximations or documented house choices. Licence: MIT (see LICENSE).

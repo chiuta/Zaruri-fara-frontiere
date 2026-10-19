@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 1.1.0 · **Ultimo aggiornamento:** 2026-10-14
+**Versione:** 1.2.0 · **Ultimo aggiornamento:** 2026-10-19
+
+Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Atlante di giochi di dadi e partite contro un'IA locale — un unico file HTML, offline, senza dipendenze e senza telemetria.
 
@@ -20,12 +22,12 @@ Questa **non è un'applicazione di gioco d'azzardo con denaro**: non ci sono pos
 
 - **Dadi**: `crypto.getRandomValues` con *rejection sampling* (senza bias del modulo). Facoltativamente, un *seed* (mulberry32) per partite riproducibili — in tal caso i dadi sono prevedibili, e l'app lo dice.
 - **Dadi SVG grandi**, con punti e `aria-label` con il valore; l'animazione del lancio rispetta `prefers-reduced-motion` e un interruttore nelle Impostazioni.
-- **Interfaccia in 7 lingue** (RO/EN/FR/IT/ES/PT/DE) con selettore e rilevamento automatico da `navigator.languages`; `lang` aggiornato dinamicamente.
+- **Interfaccia in 8 lingue** (RO/EN/FR/IT/ES/PT/DE/HU) con selettore e rilevamento automatico da `navigator.languages`; `lang` aggiornato dinamicamente.
 - **Tastiera**: tutte le azioni hanno pulsanti accessibili con Tab/Invio/Spazio; scorciatoie per i dadi (R = lancia, 1–5 = tieni) dove applicabile; aree di tocco ≥ 44 px; focus visibile; messaggi `aria-live`; layout senza scorrimento orizzontale a 390 px.
 - **Statistiche locali** (vittorie/sconfitte/pareggi) in `localStorage`, solo se disponibile; si possono cancellare dalle Impostazioni.
 - **Simulatore**: notazione `NdM`, `+/−`, costanti (fino a 1 000 000 000), `d%`, tieni/scarta i più alti/più bassi (`kh/kl/dh/dl`), limiti di 100 dadi / 1000 facce / 12 termini, cronologia (gli ultimi 50 lanci, conservata in locale). La distribuzione esatta viene calcolata solo per espressioni con intervallo ≤ 400 valori e costo ridotto (altrimenti compare una nota, la scheda non si blocca).
 - **Analisi nel simulatore** (espressioni con distribuzione esatta): interrogazione di probabilità `P(S ≥ / ≤ / = v)` calcolata dalla distribuzione esatta (con un rapporto approssimativo 1 : x); pulsante «Simula 10 000 lanci» che confronta la media e le frequenze osservate con quelle esatte; «Copia la cronologia».
-- **Plurali** corretti nei messaggi con numeri (ad es. «1 lancio» / «2 lanci») nelle 7 lingue.
+- **Plurali** corretti nei messaggi con numeri (ad es. «1 lancio» / «2 lanci») nelle 8 lingue.
 
 ## Varianti
 
@@ -74,7 +76,7 @@ Nota: cambiare lingua durante una partita **riavvia** la partita in corso.
 
 ## Lingue
 
-Gli elementi dell'interfaccia (pulsanti, messaggi, menu, le regole brevi di ogni gioco) sono in tutte e 7 le lingue. **I testi lunghi dell'atlante (regole, origini, note ⚠, descrizione dell'IA, sezione Informazioni) esistono solo in rumeno e inglese**; in FR/IT/ES/PT/DE il testo viene mostrato in inglese, contrassegnato `lang="en"`, con una discreta nota «testo in inglese». Un test verifica la parità delle chiavi i18n e delle sostituzioni `{…}` tra le 7 lingue.
+Gli elementi dell'interfaccia (pulsanti, messaggi, menu, le regole brevi di ogni gioco) sono in tutte e 8 le lingue. **I testi lunghi dell'atlante (regole, origini, note ⚠, descrizione dell'IA, sezione Informazioni) esistono solo in rumeno e inglese**; in FR/IT/ES/PT/DE/HU il testo viene mostrato in inglese, contrassegnato `lang="en"`, con una discreta nota «testo in inglese». Un test verifica la parità delle chiavi i18n e delle sostituzioni `{…}` tra le 8 lingue.
 
 ## Privacy e rete
 
@@ -135,4 +137,4 @@ Alexandru-Ionuț Chiuță (Alexio).
 
 ## Riepilogo
 
-Un atlante di giochi di dadi offline in un unico file, con 26 schede; 12 sono giocabili contro un'IA locale non LLM (Generala, 10000/Farkle, variante Greed, Perudo, dado del bugiardo classico, Mia, Craps con gettoni virtuali, Pig, Big Pig, Chicago, Shut the box, dadi poker) e le altre sono solo nell'atlante. I dadi usano `crypto.getRandomValues` con rejection sampling (seed facoltativo). Nessuna rete (CSP rigorosa), nessuna telemetria, non è gioco d'azzardo con denaro. Interfaccia in 7 lingue; i testi lunghi delle regole esistono solo in rumeno e inglese (le altre lingue mostrano l'inglese). L'IA non bara. Le varianti contrassegnate ⚠ sono approssimazioni o scelte casalinghe documentate. Licenza: MIT (vedi LICENSE).
+Un atlante di giochi di dadi offline in un unico file, con 26 schede; 12 sono giocabili contro un'IA locale non LLM (Generala, 10000/Farkle, variante Greed, Perudo, dado del bugiardo classico, Mia, Craps con gettoni virtuali, Pig, Big Pig, Chicago, Shut the box, dadi poker) e le altre sono solo nell'atlante. I dadi usano `crypto.getRandomValues` con rejection sampling (seed facoltativo). Nessuna rete (CSP rigorosa), nessuna telemetria, non è gioco d'azzardo con denaro. Interfaccia in 8 lingue; i testi lunghi delle regole esistono solo in rumeno e inglese (le altre lingue mostrano l'inglese). L'IA non bara. Le varianti contrassegnate ⚠ sono approssimazioni o scelte casalinghe documentate. Licenza: MIT (vedi LICENSE).

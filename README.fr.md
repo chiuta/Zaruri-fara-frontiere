@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 1.1.0 · **Dernière mise à jour :** 2026-10-14
+**Version :** 1.2.0 · **Dernière mise à jour :** 2026-10-19
+
+Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Atlas de jeux de dés et parties contre une IA locale — un seul fichier HTML, hors ligne, sans dépendances ni télémétrie.
 
@@ -20,12 +22,12 @@ Ce **n'est pas une application de jeux d'argent** : il n'y a ni mises réelles, 
 
 - **Dés** : `crypto.getRandomValues` avec *rejection sampling* (sans biais de modulo). En option, une *graine* (mulberry32) pour des parties reproductibles — les dés sont alors prévisibles, et l'application le signale.
 - **Grands dés SVG**, avec points et `aria-label` indiquant la valeur ; l'animation du lancer respecte `prefers-reduced-motion` et un commutateur dans les Réglages.
-- **Interface en 7 langues** (RO/EN/FR/IT/ES/PT/DE) avec sélecteur et détection automatique via `navigator.languages` ; `lang` mis à jour dynamiquement.
+- **Interface en 8 langues** (RO/EN/FR/IT/ES/PT/DE/HU) avec sélecteur et détection automatique via `navigator.languages` ; `lang` mis à jour dynamiquement.
 - **Clavier** : toutes les actions ont des boutons accessibles avec Tab/Entrée/Espace ; raccourcis pour les dés (R = lancer, 1–5 = garder) lorsque cela s'applique ; zones tactiles ≥ 44 px ; focus visible ; messages `aria-live` ; mise en page sans défilement horizontal à 390 px.
 - **Statistiques locales** (victoires/défaites/nuls) dans `localStorage`, uniquement s'il est disponible ; elles peuvent être effacées depuis les Réglages.
 - **Simulateur** : notation `NdM`, `+/−`, constantes (jusqu'à 1 000 000 000), `d%`, garder/éliminer les plus hauts/plus bas (`kh/kl/dh/dl`), limites de 100 dés / 1000 faces / 12 termes, historique (les 50 derniers lancers, conservé localement). La distribution exacte n'est calculée que pour les expressions dont l'étendue est ≤ 400 valeurs et dont le coût est faible (sinon une note s'affiche, l'onglet n'est pas bloqué).
 - **Analyse dans le simulateur** (expressions à distribution exacte) : requête de probabilité `P(S ≥ / ≤ / = v)` calculée à partir de la distribution exacte (avec un rapport approximatif 1 : x) ; bouton « Simuler 10 000 lancers » qui compare la moyenne et les fréquences observées aux valeurs exactes ; « Copier l'historique ».
-- **Pluriels** corrects dans les messages comportant des nombres (p. ex. « 1 lancer » / « 2 lancers ») dans les 7 langues.
+- **Pluriels** corrects dans les messages comportant des nombres (p. ex. « 1 lancer » / « 2 lancers ») dans les 8 langues.
 
 ## Variantes
 
@@ -74,7 +76,7 @@ Remarque : changer de langue pendant une partie **redémarre** la partie en cour
 
 ## Langues
 
-Les éléments d'interface (boutons, messages, menus, règles courtes de chaque jeu) sont dans les 7 langues. **Les textes longs de l'atlas (règles, origines, notes ⚠, description de l'IA, section À propos) n'existent qu'en roumain et en anglais** ; en FR/IT/ES/PT/DE, le texte s'affiche en anglais, marqué `lang="en"`, avec une discrète note « texte en anglais ». Un test vérifie la parité des clés i18n et des substitutions `{…}` entre les 7 langues.
+Les éléments d'interface (boutons, messages, menus, règles courtes de chaque jeu) sont dans les 8 langues. **Les textes longs de l'atlas (règles, origines, notes ⚠, description de l'IA, section À propos) n'existent qu'en roumain et en anglais** ; en FR/IT/ES/PT/DE/HU, le texte s'affiche en anglais, marqué `lang="en"`, avec une discrète note « texte en anglais ». Un test vérifie la parité des clés i18n et des substitutions `{…}` entre les 8 langues.
 
 ## Confidentialité et réseau
 
@@ -135,4 +137,4 @@ Alexandru-Ionuț Chiuță (Alexio).
 
 ## Résumé
 
-Un atlas de jeux de dés hors ligne, en un seul fichier, de 26 fiches ; 12 sont jouables contre une IA locale non LLM (Generala, 10000/Farkle, variante Greed, Perudo, dés du menteur classique, Mia, Craps avec jetons virtuels, Pig, Big Pig, Chicago, Shut the box, dés de poker) et les autres sont uniquement dans l'atlas. Les dés utilisent `crypto.getRandomValues` avec rejection sampling (graine facultative). Pas de réseau (CSP stricte), pas de télémétrie, pas de jeu d'argent. Interface en 7 langues ; les textes longs des règles n'existent qu'en roumain et en anglais (les autres langues affichent l'anglais). L'IA ne triche pas. Les variantes marquées ⚠ sont des approximations ou des choix maison documentés. Licence : MIT (voir LICENSE).
+Un atlas de jeux de dés hors ligne, en un seul fichier, de 26 fiches ; 12 sont jouables contre une IA locale non LLM (Generala, 10000/Farkle, variante Greed, Perudo, dés du menteur classique, Mia, Craps avec jetons virtuels, Pig, Big Pig, Chicago, Shut the box, dés de poker) et les autres sont uniquement dans l'atlas. Les dés utilisent `crypto.getRandomValues` avec rejection sampling (graine facultative). Pas de réseau (CSP stricte), pas de télémétrie, pas de jeu d'argent. Interface en 8 langues ; les textes longs des règles n'existent qu'en roumain et en anglais (les autres langues affichent l'anglais). L'IA ne triche pas. Les variantes marquées ⚠ sont des approximations ou des choix maison documentés. Licence : MIT (voir LICENSE).

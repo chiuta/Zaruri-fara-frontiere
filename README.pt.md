@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 1.1.0 · **Última atualização:** 2026-10-14
+**Versão:** 1.2.0 · **Última atualização:** 2026-10-19
+
+Idiomas da interface: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Atlas de jogos de dados e partidas contra uma IA local — um único ficheiro HTML, offline, sem dependências e sem telemetria.
 
@@ -20,12 +22,12 @@ Esta **não é uma aplicação de jogos de azar a dinheiro**: não há apostas r
 
 - **Dados**: `crypto.getRandomValues` com *rejection sampling* (sem enviesamento de módulo). Opcionalmente, uma *semente* (mulberry32) para partidas reproduzíveis — nesse caso os dados são previsíveis, e a aplicação di-lo.
 - **Dados SVG grandes**, com pontos e `aria-label` com o valor; a animação do lançamento respeita `prefers-reduced-motion` e um interruptor nas Definições.
-- **Interface em 7 idiomas** (RO/EN/FR/IT/ES/PT/DE) com comutador e deteção automática a partir de `navigator.languages`; `lang` atualizado dinamicamente.
+- **Interface em 8 idiomas** (RO/EN/FR/IT/ES/PT/DE/HU) com comutador e deteção automática a partir de `navigator.languages`; `lang` atualizado dinamicamente.
 - **Teclado**: todas as ações têm botões acessíveis com Tab/Enter/Espaço; atalhos para os dados (R = lançar, 1–5 = manter) onde se aplique; áreas de toque ≥ 44 px; foco visível; mensagens `aria-live`; disposição sem deslocamento horizontal a 390 px.
 - **Estatísticas locais** (vitórias/derrotas/empates) em `localStorage`, apenas se estiver disponível; podem ser apagadas nas Definições.
 - **Simulador**: notação `NdM`, `+/−`, constantes (até 1 000 000 000), `d%`, manter/descartar os mais altos/mais baixos (`kh/kl/dh/dl`), limites de 100 dados / 1000 faces / 12 termos, histórico (os últimos 50 lançamentos, guardado localmente). A distribuição exata só é calculada para expressões com intervalo ≤ 400 valores e custo reduzido (caso contrário é mostrada uma nota, o separador não bloqueia).
 - **Análise no simulador** (expressões com distribuição exata): consulta de probabilidade `P(S ≥ / ≤ / = v)` calculada a partir da distribuição exata (com uma razão aproximada 1 : x); botão «Simular 10 000 lançamentos» que compara a média e as frequências observadas com as exatas; «Copiar o histórico».
-- **Plurais** corretos nas mensagens com números (p. ex. «1 lançamento» / «2 lançamentos») nos 7 idiomas.
+- **Plurais** corretos nas mensagens com números (p. ex. «1 lançamento» / «2 lançamentos») nos 8 idiomas.
 
 ## Variantes
 
@@ -74,7 +76,7 @@ Nota: mudar de idioma durante um jogo **reinicia** o jogo em curso.
 
 ## Idiomas
 
-Os elementos da interface (botões, mensagens, menus, as regras curtas de cada jogo) estão nos 7 idiomas. **Os textos longos do atlas (regras, origens, notas ⚠, descrição da IA, secção Sobre) existem apenas em romeno e inglês**; em FR/IT/ES/PT/DE o texto é apresentado em inglês, marcado `lang="en"`, com uma discreta nota «texto em inglês». Um teste verifica a paridade das chaves i18n e das substituições `{…}` entre os 7 idiomas.
+Os elementos da interface (botões, mensagens, menus, as regras curtas de cada jogo) estão nos 8 idiomas. **Os textos longos do atlas (regras, origens, notas ⚠, descrição da IA, secção Sobre) existem apenas em romeno e inglês**; em FR/IT/ES/PT/DE/HU o texto é apresentado em inglês, marcado `lang="en"`, com uma discreta nota «texto em inglês». Um teste verifica a paridade das chaves i18n e das substituições `{…}` entre os 8 idiomas.
 
 ## Privacidade e rede
 
@@ -135,4 +137,4 @@ Alexandru-Ionuț Chiuță (Alexio).
 
 ## Resumo
 
-Um atlas de jogos de dados offline, de ficheiro único, com 26 fichas; 12 são jogáveis contra uma IA local não LLM (Generala, 10000/Farkle, variante Greed, Perudo, dado do mentiroso clássico, Mia, Craps com fichas virtuais, Pig, Big Pig, Chicago, Shut the box, dados de póquer) e as restantes são apenas de atlas. Os dados usam `crypto.getRandomValues` com rejection sampling (semente opcional). Sem rede (CSP estrita), sem telemetria, não é jogo de azar a dinheiro. Interface em 7 idiomas; os textos longos das regras existem apenas em romeno e inglês (os outros idiomas mostram inglês). A IA não faz batota. As variantes assinaladas com ⚠ são aproximações ou escolhas caseiras documentadas. Licença: MIT (ver LICENSE).
+Um atlas de jogos de dados offline, de ficheiro único, com 26 fichas; 12 são jogáveis contra uma IA local não LLM (Generala, 10000/Farkle, variante Greed, Perudo, dado do mentiroso clássico, Mia, Craps com fichas virtuais, Pig, Big Pig, Chicago, Shut the box, dados de póquer) e as restantes são apenas de atlas. Os dados usam `crypto.getRandomValues` com rejection sampling (semente opcional). Sem rede (CSP estrita), sem telemetria, não é jogo de azar a dinheiro. Interface em 8 idiomas; os textos longos das regras existem apenas em romeno e inglês (os outros idiomas mostram inglês). A IA não faz batota. As variantes assinaladas com ⚠ são aproximações ou escolhas caseiras documentadas. Licença: MIT (ver LICENSE).

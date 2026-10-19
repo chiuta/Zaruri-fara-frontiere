@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.1.0 · **Utolsó frissítés:** 2026-10-14
+**Verzió:** 1.2.0 · **Utolsó frissítés:** 2026-10-19
+
+A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Kockajátékok atlasza és játszmák egy helyi mesterséges intelligencia ellen — egyetlen HTML-fájl, offline, függőségek és telemetria nélkül.
 
@@ -20,12 +22,12 @@ Ez **nem pénzben játszott szerencsejáték-alkalmazás**: nincsenek valódi t�
 
 - **Kockák**: `crypto.getRandomValues` *rejection sampling*-gel (modulo-torzítás nélkül). Opcionálisan egy *seed* (mulberry32) az ismételhető játszmákhoz — ilyenkor a kockák megjósolhatók, és az alkalmazás ezt jelzi.
 - **Nagy SVG-kockák**, pöttyökkel és az értéket tartalmazó `aria-label`-lel; a dobás animációja tiszteletben tartja a `prefers-reduced-motion` beállítást és a Beállítások egyik kapcsolóját.
-- **Felület 7 nyelven** (RO/EN/FR/IT/ES/PT/DE) nyelvváltóval és a `navigator.languages` alapján történő automatikus észleléssel; a `lang` dinamikusan frissül.
+- **Felület 8 nyelven** (RO/EN/FR/IT/ES/PT/DE/HU) nyelvváltóval és a `navigator.languages` alapján történő automatikus észleléssel; a `lang` dinamikusan frissül.
 - **Billentyűzet**: minden műveletnek van Tabbal/Enterrel/Szóközzel elérhető gombja; billentyűparancsok a kockákhoz (R = dobás, 1–5 = megtartás), ahol van értelme; érintési felületek ≥ 44 px; látható fókusz; `aria-live` üzenetek; elrendezés vízszintes görgetés nélkül 390 px-en.
 - **Helyi statisztikák** (győzelmek/vereségek/döntetlenek) a `localStorage`-ban, csak ha elérhető; a Beállításokban törölhetők.
 - **Szimulátor**: `NdM` jelölés, `+/−`, állandók (legfeljebb 1 000 000 000), `d%`, a legnagyobbak/legkisebbek megtartása/elhagyása (`kh/kl/dh/dl`), korlátok: 100 kocka / 1000 oldal / 12 tag, előzmények (az utolsó 50 dobás, helyben tárolva). A pontos eloszlást csak legfeljebb 400 értékű tartományú és kis költségű kifejezésekre számolja ki (egyébként megjegyzés jelenik meg, a lap nem fagy le).
 - **Elemzés a szimulátorban** (pontos eloszlású kifejezések): `P(S ≥ / ≤ / = v)` valószínűségi lekérdezés a pontos eloszlásból számolva (közelítő 1 : x aránnyal); „10 000 dobás szimulálása” gomb, amely összeveti a megfigyelt átlagot és gyakoriságokat a pontosakkal; „Előzmények másolása”.
-- Helyes **többes szám** a számokat tartalmazó üzenetekben (pl. „1 dobás” / „2 dobás”) mind a 7 nyelven.
+- Helyes **többes szám** a számokat tartalmazó üzenetekben (pl. „1 dobás” / „2 dobás”) mind a 8 nyelven.
 
 ## Változatok
 
@@ -74,7 +76,7 @@ Megjegyzés: a nyelv játék közbeni váltása **újraindítja** az éppen foly
 
 ## Nyelvek
 
-A felületi elemek (gombok, üzenetek, menük, az egyes játékok rövid szabályai) mind a 7 nyelven megvannak. **Az atlasz hosszú szövegei (szabályok, eredet, ⚠ megjegyzések, az MI leírása, a Névjegy szakasz) csak románul és angolul léteznek**; FR/IT/ES/PT/DE nyelven a szöveg angolul jelenik meg, `lang="en"` jelöléssel és egy diszkrét „szöveg angolul” megjegyzéssel. Egy teszt ellenőrzi az i18n-kulcsok és a `{…}` helyettesítések egyezését a 7 nyelv között.
+A felületi elemek (gombok, üzenetek, menük, az egyes játékok rövid szabályai) mind a 8 nyelven megvannak. **Az atlasz hosszú szövegei (szabályok, eredet, ⚠ megjegyzések, az MI leírása, a Névjegy szakasz) csak románul és angolul léteznek**; FR/IT/ES/PT/DE/HU nyelven a szöveg angolul jelenik meg, `lang="en"` jelöléssel és egy diszkrét „szöveg angolul” megjegyzéssel. Egy teszt ellenőrzi az i18n-kulcsok és a `{…}` helyettesítések egyezését a 8 nyelv között.
 
 ## Adatvédelem és hálózat
 
@@ -135,4 +137,4 @@ Alexandru-Ionuț Chiuță (Alexio).
 
 ## Összefoglaló
 
-Egyfájlos, offline kockajáték-atlasz 26 lappal; 12 játszható egy helyi, nem LLM-alapú MI ellen (Generala, 10000/Farkle, Greed-változat, Perudo, klasszikus hazudós kocka, Mia, Craps virtuális zsetonokkal, Pig, Big Pig, Chicago, Shut the box, pókerkockák), a többi csak az atlaszban szerepel. A kockák a `crypto.getRandomValues`-t használják rejection sampling-gel (opcionális seed). Nincs hálózat (szigorú CSP), nincs telemetria, nem pénzben játszott szerencsejáték. Felület 7 nyelven; a hosszú szabályszövegek csak románul és angolul léteznek (a többi nyelven angol jelenik meg). Az MI nem csal. A ⚠ jelölésű változatok közelítések vagy dokumentált házi döntések. Licenc: MIT (lásd LICENSE).
+Egyfájlos, offline kockajáték-atlasz 26 lappal; 12 játszható egy helyi, nem LLM-alapú MI ellen (Generala, 10000/Farkle, Greed-változat, Perudo, klasszikus hazudós kocka, Mia, Craps virtuális zsetonokkal, Pig, Big Pig, Chicago, Shut the box, pókerkockák), a többi csak az atlaszban szerepel. A kockák a `crypto.getRandomValues`-t használják rejection sampling-gel (opcionális seed). Nincs hálózat (szigorú CSP), nincs telemetria, nem pénzben játszott szerencsejáték. Felület 8 nyelven; a hosszú szabályszövegek csak románul és angolul léteznek (a többi nyelven angol jelenik meg). Az MI nem csal. A ⚠ jelölésű változatok közelítések vagy dokumentált házi döntések. Licenc: MIT (lásd LICENSE).

@@ -2,7 +2,9 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.1.0 · **Ultima actualizare:** 2026-10-14
+**Versiune:** 1.2.0 · **Ultima actualizare:** 2026-10-19
+
+Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Atlas de jocuri cu zaruri și partide contra unui AI local — un singur fișier HTML, offline, fără dependențe, fără telemetrie.
 
@@ -20,12 +22,12 @@ Aceasta **nu este o aplicație de jocuri de noroc pe bani**: nu există mize rea
 
 - **Zaruri**: `crypto.getRandomValues` cu *rejection sampling* (fără bias modulo). Opțional, un *seed* (mulberry32) pentru partide reproductibile — atunci zarurile sunt previzibile, iar aplicația o spune.
 - **Zaruri SVG mari**, cu puncte și `aria-label` cu valoarea; animația de aruncare respectă `prefers-reduced-motion` și un comutator din Setări.
-- **Interfață în 7 limbi** (RO/EN/FR/IT/ES/PT/DE) cu comutator și autodetecție din `navigator.languages`; `lang` actualizat dinamic.
+- **Interfață în 8 limbi** (RO/EN/FR/IT/ES/PT/DE/HU) cu comutator și autodetecție din `navigator.languages`; `lang` actualizat dinamic.
 - **Tastatură**: toate acțiunile au butoane accesibile cu Tab/Enter/Spațiu; scurtături pentru zaruri (R = aruncă, 1–5 = păstrează) unde se aplică; zone de atingere ≥ 44 px; focus vizibil; mesaje `aria-live`; aspect fără defilare orizontală la 390 px.
 - **Statistici locale** (victorii/înfrângeri/remize) în `localStorage`, doar dacă e disponibil; se pot șterge din Setări.
 - **Simulator**: notație `NdM`, `+/−`, constante (până la 1 000 000 000), `d%`, păstrează/elimină cele mai mari/mici (`kh/kl/dh/dl`), limite 100 zaruri / 1000 fețe / 12 termeni, istoric (ultimele 50 de aruncări, păstrat local). Distribuția exactă se calculează doar pentru expresii cu interval ≤ 400 de valori și cost redus (altfel se afișează o notă, nu se blochează fila).
 - **Analiză în simulator** (expresii cu distribuție exactă): interogare de probabilitate `P(S ≥ / ≤ / = v)` calculată din distribuția exactă (cu raport aproximativ 1 : x); buton „Simulează 10 000 aruncări” care compară media și frecvențele observate cu cele exacte; „Copiază istoricul”.
-- **Pluralizare** corectă în mesajele cu numere (ex. „1 aruncare” / „2 aruncări”) în cele 7 limbi.
+- **Pluralizare** corectă în mesajele cu numere (ex. „1 aruncare” / „2 aruncări”) în cele 8 limbi.
 
 ## Variante
 
@@ -74,7 +76,7 @@ Notă: schimbarea limbii în timpul unui joc **repornește** jocul curent.
 
 ## Limbi
 
-Elementele de interfață (butoane, mesaje, meniuri, regulile scurte din fiecare joc) sunt în toate cele 7 limbi. **Textele lungi din atlas (reguli, origini, note ⚠, descrierea AI, secțiunea Despre) există doar în română și engleză**; în FR/IT/ES/PT/DE se afișează textul în engleză, marcat `lang="en"`, cu o notă discretă „text în engleză". Un test verifică paritatea cheilor i18n și a substituțiilor `{…}` între cele 7 limbi.
+Elementele de interfață (butoane, mesaje, meniuri, regulile scurte din fiecare joc) sunt în toate cele 8 limbi. **Textele lungi din atlas (reguli, origini, note ⚠, descrierea AI, secțiunea Despre) există doar în română și engleză**; în FR/IT/ES/PT/DE/HU se afișează textul în engleză, marcat `lang="en"`, cu o notă discretă „text în engleză". Un test verifică paritatea cheilor i18n și a substituțiilor `{…}` între cele 8 limbi.
 
 ## Confidențialitate și rețea
 
@@ -135,4 +137,4 @@ Alexandru-Ionuț Chiuță (Alexio).
 
 ## English summary
 
-A single-file, offline dice-game atlas with 26 entries; 12 are playable against a local, non-LLM AI (Generala, 10000/Farkle, Greed variant, Perudo, classic Liar's dice, Mia, Craps with virtual chips, Pig, Big Pig, Chicago, Shut the box, Poker dice) and the rest are atlas-only. Dice use `crypto.getRandomValues` with rejection sampling (optional seed). No network (strict CSP), no telemetry, not real-money gambling. UI in 7 languages; long rule texts exist in Romanian and English only (other languages show English). The AI does not cheat. Variants marked ⚠ are approximations or documented house choices. Licence: MIT (see LICENSE).
+A single-file, offline dice-game atlas with 26 entries; 12 are playable against a local, non-LLM AI (Generala, 10000/Farkle, Greed variant, Perudo, classic Liar's dice, Mia, Craps with virtual chips, Pig, Big Pig, Chicago, Shut the box, Poker dice) and the rest are atlas-only. Dice use `crypto.getRandomValues` with rejection sampling (optional seed). No network (strict CSP), no telemetry, not real-money gambling. UI in 8 languages; long rule texts exist in Romanian and English only (other languages show English). The AI does not cheat. Variants marked ⚠ are approximations or documented house choices. Licence: MIT (see LICENSE).

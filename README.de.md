@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.1.0 · **Zuletzt aktualisiert:** 2026-10-14
+**Version:** 1.2.0 · **Zuletzt aktualisiert:** 2026-10-19
+
+Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Ein Atlas von Würfelspielen und Partien gegen eine lokale KI — eine einzige HTML-Datei, offline, ohne Abhängigkeiten und ohne Telemetrie.
 
@@ -20,12 +22,12 @@ Dies ist **keine Glücksspiel-App um echtes Geld**: Es gibt keine echten Einsät
 
 - **Würfel**: `crypto.getRandomValues` mit *Rejection Sampling* (ohne Modulo-Verzerrung). Optional ein *Seed* (mulberry32) für reproduzierbare Partien — dann sind die Würfel vorhersehbar, und die App weist darauf hin.
 - **Große SVG-Würfel**, mit Augen und einem `aria-label` mit dem Wert; die Wurfanimation beachtet `prefers-reduced-motion` und einen Schalter in den Einstellungen.
-- **Oberfläche in 7 Sprachen** (RO/EN/FR/IT/ES/PT/DE) mit Umschalter und Autoerkennung aus `navigator.languages`; `lang` wird dynamisch aktualisiert.
+- **Oberfläche in 8 Sprachen** (RO/EN/FR/IT/ES/PT/DE/HU) mit Umschalter und Autoerkennung aus `navigator.languages`; `lang` wird dynamisch aktualisiert.
 - **Tastatur**: Alle Aktionen haben Schaltflächen, die mit Tab/Enter/Leertaste erreichbar sind; Kürzel für Würfel (R = würfeln, 1–5 = behalten), wo anwendbar; Touch-Flächen ≥ 44 px; sichtbarer Fokus; `aria-live`-Meldungen; Layout ohne horizontales Scrollen bei 390 px.
 - **Lokale Statistiken** (Siege/Niederlagen/Unentschieden) in `localStorage`, nur wenn verfügbar; sie lassen sich in den Einstellungen löschen.
 - **Simulator**: Notation `NdM`, `+/−`, Konstanten (bis 1 000 000 000), `d%`, höchste/niedrigste behalten/verwerfen (`kh/kl/dh/dl`), Grenzen von 100 Würfeln / 1000 Seiten / 12 Termen, Verlauf (die letzten 50 Würfe, lokal gespeichert). Die exakte Verteilung wird nur für Ausdrücke mit einem Wertebereich ≤ 400 Werten und geringem Aufwand berechnet (sonst erscheint ein Hinweis, der Tab wird nicht blockiert).
 - **Analyse im Simulator** (Ausdrücke mit exakter Verteilung): Wahrscheinlichkeitsabfrage `P(S ≥ / ≤ / = v)`, berechnet aus der exakten Verteilung (mit einem ungefähren Verhältnis 1 : x); Schaltfläche „10 000 Würfe simulieren", die den beobachteten Mittelwert und die Häufigkeiten mit den exakten vergleicht; „Verlauf kopieren".
-- Korrekte **Pluralbildung** in Meldungen mit Zahlen (z. B. „1 Wurf" / „2 Würfe") in den 7 Sprachen.
+- Korrekte **Pluralbildung** in Meldungen mit Zahlen (z. B. „1 Wurf" / „2 Würfe") in den 8 Sprachen.
 
 ## Varianten
 
@@ -74,7 +76,7 @@ Hinweis: Ein Sprachwechsel während eines Spiels **startet** die laufende Partie
 
 ## Sprachen
 
-Die Oberflächenelemente (Schaltflächen, Meldungen, Menüs, die Kurzregeln jedes Spiels) liegen in allen 7 Sprachen vor. **Die langen Texte im Atlas (Regeln, Ursprünge, ⚠-Hinweise, KI-Beschreibung, Abschnitt „Über") gibt es nur auf Rumänisch und Englisch**; in FR/IT/ES/PT/DE wird der Text auf Englisch angezeigt, mit `lang="en"` markiert und einem dezenten Hinweis „Text auf Englisch". Ein Test prüft die Parität der i18n-Schlüssel und der `{…}`-Ersetzungen über die 7 Sprachen.
+Die Oberflächenelemente (Schaltflächen, Meldungen, Menüs, die Kurzregeln jedes Spiels) liegen in allen 8 Sprachen vor. **Die langen Texte im Atlas (Regeln, Ursprünge, ⚠-Hinweise, KI-Beschreibung, Abschnitt „Über") gibt es nur auf Rumänisch und Englisch**; in FR/IT/ES/PT/DE/HU wird der Text auf Englisch angezeigt, mit `lang="en"` markiert und einem dezenten Hinweis „Text auf Englisch". Ein Test prüft die Parität der i18n-Schlüssel und der `{…}`-Ersetzungen über die 8 Sprachen.
 
 ## Datenschutz und Netzwerk
 
@@ -135,4 +137,4 @@ Alexandru-Ionuț Chiuță (Alexio).
 
 ## Zusammenfassung
 
-Ein Offline-Atlas von Würfelspielen in einer einzigen Datei mit 26 Steckbriefen; 12 sind gegen eine lokale Nicht-LLM-KI spielbar (Generala, 10000/Farkle, Greed-Variante, Perudo, klassischer Lügenwürfel, Mia, Craps mit virtuellen Chips, Pig, Big Pig, Chicago, Shut the box, Pokerwürfel), der Rest steht nur im Atlas. Die Würfel nutzen `crypto.getRandomValues` mit Rejection Sampling (optionaler Seed). Kein Netzwerk (strikte CSP), keine Telemetrie, kein Glücksspiel um echtes Geld. Oberfläche in 7 Sprachen; lange Regeltexte gibt es nur auf Rumänisch und Englisch (die anderen Sprachen zeigen Englisch). Die KI schummelt nicht. Mit ⚠ gekennzeichnete Varianten sind Näherungen oder dokumentierte Hausentscheidungen. Lizenz: MIT (siehe LICENSE).
+Ein Offline-Atlas von Würfelspielen in einer einzigen Datei mit 26 Steckbriefen; 12 sind gegen eine lokale Nicht-LLM-KI spielbar (Generala, 10000/Farkle, Greed-Variante, Perudo, klassischer Lügenwürfel, Mia, Craps mit virtuellen Chips, Pig, Big Pig, Chicago, Shut the box, Pokerwürfel), der Rest steht nur im Atlas. Die Würfel nutzen `crypto.getRandomValues` mit Rejection Sampling (optionaler Seed). Kein Netzwerk (strikte CSP), keine Telemetrie, kein Glücksspiel um echtes Geld. Oberfläche in 8 Sprachen; lange Regeltexte gibt es nur auf Rumänisch und Englisch (die anderen Sprachen zeigen Englisch). Die KI schummelt nicht. Mit ⚠ gekennzeichnete Varianten sind Näherungen oder dokumentierte Hausentscheidungen. Lizenz: MIT (siehe LICENSE).
