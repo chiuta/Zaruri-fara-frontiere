@@ -135,6 +135,6 @@ MIT — vezi fișierul LICENSE.
 
 Alexandru-Ionuț Chiuță (Alexio).
 
-## English summary
+## Rezumat
 
-A single-file, offline dice-game atlas with 26 entries; 12 are playable against a local, non-LLM AI (Generala, 10000/Farkle, Greed variant, Perudo, classic Liar's dice, Mia, Craps with virtual chips, Pig, Big Pig, Chicago, Shut the box, Poker dice) and the rest are atlas-only. Dice use `crypto.getRandomValues` with rejection sampling (optional seed). No network (strict CSP), no telemetry, not real-money gambling. UI in 8 languages; long rule texts exist in Romanian and English only (other languages show English). The AI does not cheat. Variants marked ⚠ are approximations or documented house choices. Licence: MIT (see LICENSE).
+Un atlas offline de jocuri cu zaruri într-un singur fișier, cu 26 de intrări; 12 se pot juca împotriva unui AI local, non-LLM (Generala, 10000/Farkle, varianta Greed, Perudo, Liar's dice clasic, Mia, Craps cu jetoane virtuale, Pig, Big Pig, Chicago, Shut the box, Poker dice), iar restul sunt doar în atlas. Zarurile folosesc `crypto.getRandomValues` cu eșantionare prin respingere (sămânță opțională). Fără rețea (CSP strict), fără telemetrie, nu este joc de noroc pe bani reali. Interfață în 8 limbi; textele lungi cu reguli există doar în română și engleză (celelalte limbi afișează engleza). AI-ul nu trișează. Variantele marcate ⚠ sunt aproximări sau alegeri proprii documentate. Licență: MIT (vezi LICENSE).
