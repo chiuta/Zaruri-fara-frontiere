@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 1.2.4 · **Ultimo aggiornamento:** 2026-10-22
+**Versione:** 1.2.5 · **Ultimo aggiornamento:** 2026-10-22
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -111,6 +111,9 @@ Gli elementi dell'interfaccia (pulsanti, messaggi, menu, le regole brevi di ogni
 Non richiede build, server né installazione: apri `index.html` in un browser moderno.
 
 ## Cronologia / Changelog
+
+### 1.2.5 — 2026-10-22
+- fff-kit 1.1.4: bersagli touch e testo minimo
 
 ### 1.2.4 — 2026-10-22
 - fff-kit 1.1.2: PBKDF2 a 600.000 iterazioni, protezione anti-clickjacking.

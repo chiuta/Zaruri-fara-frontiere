@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.2.4 · **Zuletzt aktualisiert:** 2026-10-22
+**Version:** 1.2.5 · **Zuletzt aktualisiert:** 2026-10-22
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -111,6 +111,9 @@ Die Oberflächenelemente (Schaltflächen, Meldungen, Menüs, die Kurzregeln jede
 Sie benötigt keinen Build, keinen Server und keine Installation: Öffne `index.html` in einem modernen Browser.
 
 ## Verlauf / Changelog
+
+### 1.2.5 — 2026-10-22
+- fff-kit 1.1.4: Touch-Ziele und Mindestschriftgröße
 
 ### 1.2.4 — 2026-10-22
 - fff-kit 1.1.2: PBKDF2 mit 600.000 Iterationen, Schutz vor Clickjacking.
