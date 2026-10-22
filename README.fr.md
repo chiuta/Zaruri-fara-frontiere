@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 1.2.6 · **Dernière mise à jour :** 2026-10-23
+**Version :** 1.2.7 · **Dernière mise à jour :** 2026-10-23
 
 Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -111,6 +111,9 @@ Les éléments d'interface (boutons, messages, menus, règles courtes de chaque 
 Elle ne nécessite ni build, ni serveur, ni installation : ouvrez `index.html` dans un navigateur moderne.
 
 ## Historique / Changelog
+
+### 1.2.7 — 2026-10-23
+- fff-kit 1.2.0 : l'état enregistré (langue, animation, graine, statistiques, historique des lancers) est désormais conservé sous la clé `zaruri-fara-frontiere.state` ; l'ancienne clé `zff` est migrée automatiquement au démarrage (y compris après l'import d'une ancienne sauvegarde .fff.json) : statistiques et historique existants sont conservés.
 
 ### 1.2.5 — 2026-10-22
 - fff-kit 1.1.4 : cibles tactiles et taille de texte minimale
