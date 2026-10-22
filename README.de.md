@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.2.2 · **Zuletzt aktualisiert:** 2026-10-22
+**Version:** 1.2.3 · **Zuletzt aktualisiert:** 2026-10-22
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -111,6 +111,9 @@ Die Oberflächenelemente (Schaltflächen, Meldungen, Menüs, die Kurzregeln jede
 Sie benötigt keinen Build, keinen Server und keine Installation: Öffne `index.html` in einem modernen Browser.
 
 ## Verlauf / Changelog
+
+### 1.2.3 — 2026-10-22
+- Alle noch rein englischen Untertitel (Poker dice, Greed (variant), Liar’s dice (classic), Non-transitive dice, Generala (Argentine), Perudo, 10000 / Farkle, Shut the box, Pass the Pigs) stehen jetzt im Sprachwörterbuch, für alle 8 Sprachen.
 
 ### 1.2.2 — 2026-10-22
 - Die englisch gebliebenen Bezeichnungen „Generala (five-dice game)“ und „Role-playing dice (d4–d100)“ sind nun in allen 8 Sprachen übersetzt; die englische Oberfläche zeigt jetzt englische Kartentitel.

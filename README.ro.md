@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.2.2 · **Ultima actualizare:** 2026-10-22
+**Versiune:** 1.2.3 · **Ultima actualizare:** 2026-10-22
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -111,6 +111,9 @@ Elementele de interfață (butoane, mesaje, meniuri, regulile scurte din fiecare
 Nu necesită build, server sau instalare: deschide `index.html` într-un browser modern.
 
 ## Istoric / Changelog
+
+### 1.2.3 — 2026-10-22
+- Toate subtitlurile rămase doar în engleză (Poker dice, Greed (variant), Liar’s dice (classic), Non-transitive dice, Generala (Argentine), Perudo, 10000 / Farkle, Shut the box, Pass the Pigs) sunt acum în dicționarul de limbă, pentru cele 8 limbi.
 
 ### 1.2.2 — 2026-10-22
 - Etichetele rămase în engleză „Generala (five-dice game)” și „Role-playing dice (d4–d100)” sunt traduse în toate cele 8 limbi; interfața în engleză afișează titluri de fișe în engleză.

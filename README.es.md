@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 1.2.2 · **Última actualización:** 2026-10-22
+**Versión:** 1.2.3 · **Última actualización:** 2026-10-22
 
 Idiomas de la interfaz: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -111,6 +111,9 @@ Los elementos de la interfaz (botones, mensajes, menús, las reglas breves de ca
 No necesita compilación, servidor ni instalación: abre `index.html` en un navegador moderno.
 
 ## Historial / Changelog
+
+### 1.2.3 — 2026-10-22
+- Todos los subtítulos que quedaban solo en inglés (Poker dice, Greed (variant), Liar’s dice (classic), Non-transitive dice, Generala (Argentine), Perudo, 10000 / Farkle, Shut the box, Pass the Pigs) ya están en el diccionario de idiomas, para los 8 idiomas.
 
 ### 1.2.2 — 2026-10-22
 - Traducidas a los 8 idiomas las etiquetas que seguían en inglés «Generala (five-dice game)» y «Role-playing dice (d4–d100)»; la interfaz en inglés ahora muestra los títulos de las fichas en inglés.

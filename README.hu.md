@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.2.2 · **Utolsó frissítés:** 2026-10-22
+**Verzió:** 1.2.3 · **Utolsó frissítés:** 2026-10-22
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -111,6 +111,9 @@ A felületi elemek (gombok, üzenetek, menük, az egyes játékok rövid szabál
 Nem igényel buildet, szervert vagy telepítést: nyisd meg az `index.html` fájlt egy modern böngészőben.
 
 ## Előzmények / Changelog
+
+### 1.2.3 — 2026-10-22
+- Az összes addig csak angolul megjelenő alcím (Poker dice, Greed (variant), Liar’s dice (classic), Non-transitive dice, Generala (Argentine), Perudo, 10000 / Farkle, Shut the box, Pass the Pigs) mostantól a nyelvi szótárban van, mind a 8 nyelvre.
 
 ### 1.2.2 — 2026-10-22
 - A továbbra is angolul maradt „Generala (five-dice game)” és „Role-playing dice (d4–d100)” címkék mind a 8 nyelven le vannak fordítva; az angol felület mostantól angol kártyacímeket mutat.
