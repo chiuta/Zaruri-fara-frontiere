@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 1.2.1 · **Ultimo aggiornamento:** 2026-10-19
+**Versione:** 1.2.2 · **Ultimo aggiornamento:** 2026-10-22
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -111,6 +111,9 @@ Gli elementi dell'interfaccia (pulsanti, messaggi, menu, le regole brevi di ogni
 Non richiede build, server né installazione: apri `index.html` in un browser moderno.
 
 ## Cronologia / Changelog
+
+### 1.2.2 — 2026-10-22
+- Tradotte in tutte e 8 le lingue le etichette rimaste in inglese «Generala (five-dice game)» e «Role-playing dice (d4–d100)»; l’interfaccia inglese ora mostra i titoli delle schede in inglese.
 
 ### 1.1.0 — 2026-10-14
 - Copia di sicurezza ed etichettatura dei dati (fff-kit).

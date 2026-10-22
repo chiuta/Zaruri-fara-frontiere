@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.2.1 · **Last updated:** 2026-10-19
+**Version:** 1.2.2 · **Last updated:** 2026-10-22
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -111,6 +111,9 @@ The interface elements (buttons, messages, menus, the short rules of each game) 
 It needs no build, server or installation: open `index.html` in a modern browser.
 
 ## History / Changelog
+
+### 1.2.2 — 2026-10-22
+- Localized the English-only card labels “Generala (five-dice game)” and “Role-playing dice (d4–d100)” in all 8 languages; the English UI now shows English card titles.
 
 ### 1.1.0 — 2026-10-14
 - Backup and data labelling (fff-kit).
