@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.2.7 · **Last updated:** 2026-10-23
+**Version:** 1.2.8 · **Last updated:** 2026-10-23
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -111,6 +111,10 @@ The interface elements (buttons, messages, menus, the short rules of each game) 
 It needs no build, server or installation: open `index.html` in a modern browser.
 
 ## History / Changelog
+
+### 1.2.8 — 2026-10-23
+- Hungarian: the “Liar’s dice” message now shows how many lives are lost (it always said one).
+- Local state: a non-finite best score in a stored/imported copy is read as 0.
 
 ### 1.2.7 — 2026-10-23
 - fff-kit 1.2.0: the saved state (language, animation, seed, statistics, roll history) is now stored under `zaruri-fara-frontiere.state`; the old `zff` key is migrated automatically at start-up (also after importing an old .fff.json backup), so existing statistics and history are kept.

@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 1.2.7 · **Ultimo aggiornamento:** 2026-10-23
+**Versione:** 1.2.8 · **Ultimo aggiornamento:** 2026-10-23
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -111,6 +111,10 @@ Gli elementi dell'interfaccia (pulsanti, messaggi, menu, le regole brevi di ogni
 Non richiede build, server né installazione: apri `index.html` in un browser moderno.
 
 ## Cronologia / Changelog
+
+### 1.2.8 — 2026-10-23
+- Ungherese: il messaggio del «Dado bugiardo» indica ora quante vite si perdono (diceva sempre una).
+- Stato locale: un punteggio migliore non finito in una copia salvata/importata è letto come 0.
 
 ### 1.2.7 — 2026-10-23
 - fff-kit 1.2.0: lo stato salvato (lingua, animazione, seed, statistiche, cronologia dei lanci) è ora conservato con la chiave `zaruri-fara-frontiere.state`; la vecchia chiave `zff` viene migrata automaticamente all'avvio (anche dopo l'importazione di una vecchia copia .fff.json): statistiche e cronologia esistenti restano.

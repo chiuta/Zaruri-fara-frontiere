@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.2.7 · **Ultima actualizare:** 2026-10-23
+**Versiune:** 1.2.8 · **Ultima actualizare:** 2026-10-23
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -111,6 +111,10 @@ Elementele de interfață (butoane, mesaje, meniuri, regulile scurte din fiecare
 Nu necesită build, server sau instalare: deschide `index.html` într-un browser modern.
 
 ## Istoric / Changelog
+
+### 1.2.8 — 2026-10-23
+- Maghiară: mesajul „Zarul mincinos” arată acum câte vieți se pierd (spunea mereu una).
+- Stare locală: un scor maxim nefinit dintr-o copie stocată/importată este citit ca 0.
 
 ### 1.2.7 — 2026-10-23
 - fff-kit 1.2.0: starea salvată (limba, animația, seed-ul, statisticile, istoricul aruncărilor) se păstrează acum sub cheia `zaruri-fara-frontiere.state`; vechea cheie `zff` este migrată automat la pornire (și după importul unei copii .fff.json vechi), deci statisticile și istoricul existente se păstrează.
