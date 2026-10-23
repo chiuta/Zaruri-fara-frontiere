@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.2.7 · **Utolsó frissítés:** 2026-10-23
+**Verzió:** 1.2.8 · **Utolsó frissítés:** 2026-10-23
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -111,6 +111,10 @@ A felületi elemek (gombok, üzenetek, menük, az egyes játékok rövid szabál
 Nem igényel buildet, szervert vagy telepítést: nyisd meg az `index.html` fájlt egy modern böngészőben.
 
 ## Előzmények / Changelog
+
+### 1.2.8 — 2026-10-23
+- Magyar: a „Hazug kocka” üzenete most megmutatja, hány élet vész el (korábban mindig egyet írt).
+- Helyi állapot: a mentett/importált másolatban lévő nem véges legjobb eredmény 0-ként olvasódik be.
 
 ### 1.2.7 — 2026-10-23
 - fff-kit 1.2.0: a mentett állapot (nyelv, animáció, seed, statisztikák, dobási előzmények) mostantól a `zaruri-fara-frontiere.state` kulcs alatt tárolódik; a régi `zff` kulcsot az alkalmazás induláskor automatikusan átköltözteti (régi .fff.json mentés importálása után is), így a meglévő statisztikák és előzmények megmaradnak.

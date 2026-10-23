@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.2.7 · **Zuletzt aktualisiert:** 2026-10-23
+**Version:** 1.2.8 · **Zuletzt aktualisiert:** 2026-10-23
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -111,6 +111,10 @@ Die Oberflächenelemente (Schaltflächen, Meldungen, Menüs, die Kurzregeln jede
 Sie benötigt keinen Build, keinen Server und keine Installation: Öffne `index.html` in einem modernen Browser.
 
 ## Verlauf / Changelog
+
+### 1.2.8 — 2026-10-23
+- Ungarisch: Die Meldung des „Lügenwürfels“ zeigt jetzt, wie viele Leben verloren gehen (sie sagte immer eins).
+- Lokaler Zustand: Eine nicht endliche Bestleistung in einer gespeicherten/importierten Kopie wird als 0 gelesen.
 
 ### 1.2.7 — 2026-10-23
 - fff-kit 1.2.0: Der gespeicherte Zustand (Sprache, Animation, Seed, Statistiken, Wurfverlauf) liegt jetzt unter dem Schlüssel `zaruri-fara-frontiere.state`; der alte Schlüssel `zff` wird beim Start automatisch migriert (auch nach dem Import einer alten .fff.json-Sicherung), sodass vorhandene Statistiken und der Verlauf erhalten bleiben.
