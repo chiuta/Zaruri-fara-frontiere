@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.2.9 · **Ultima actualizare:** 2026-10-26
+**Versiune:** 2.0.0 · **Ultima actualizare:** 2026-10-26
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -20,6 +20,9 @@ Aceasta **nu este o aplicație de jocuri de noroc pe bani**: nu există mize rea
 
 ## Funcții (verificate în cod și în teste)
 
+- **v2.0.0 — Motor de reguli pentru zaruri** (fila „Reguli”): sisteme definite într-un fișier JSON (`zff-rules/1`: variabile, aruncări de tip sumă/pool/Fate, benzi de rezultat), cu presetări în stil d20, 2d6, pool d10, Fate și pool d6, import/export de fișiere (validate strict, max. 96 KB) și probabilități pe benzi (exacte unde se poate, altfel estimate cu semință fixă).
+- **Istoric verificabil**: fiecare aruncare își păstrează sămânța și hash-ul intrării anterioare (SHA-256); verificarea refăcând zarurile din semințe prinde orice modificare, iar istoricul se exportă și poate fi verificat de oricine.
+- **Aruncare comună fără server**: protocol angajament–dezvăluire cu coduri text schimbate pe orice canal; toți participanții obțin aceleași zaruri, iar un secret trucat e semnalat cu numele. Nu folosește WebRTC/p2p (cine dezvăluie ultimul poate refuza; aruncarea se repetă).
 - **Zaruri**: `crypto.getRandomValues` cu *rejection sampling* (fără bias modulo). Opțional, un *seed* (mulberry32) pentru partide reproductibile — atunci zarurile sunt previzibile, iar aplicația o spune.
 - **Zaruri SVG mari**, cu puncte și `aria-label` cu valoarea; animația de aruncare respectă `prefers-reduced-motion` și un comutator din Setări.
 - **Interfață în 8 limbi** (RO/EN/FR/IT/ES/PT/DE/HU) cu comutator și autodetecție din `navigator.languages`; `lang` actualizat dinamic.
