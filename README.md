@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 2.0.0 · **Last updated:** 2026-10-26
+**Version:** 2.1.0 · **Last updated:** 2026-10-27
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -11,6 +11,8 @@ An atlas of dice games and matches against a local AI — a single HTML file, of
 **Live:** https://chiuta.github.io/Zaruri-fara-frontiere/
 
 ![Screenshot: a game of Generala in progress](screenshot.en.png)
+
+**New in 2.1.0:** a *Probability lesson* in the Simulator tab: an exact SVG histogram of the sum of n dice with s faces (integer counting, tested against brute force), mean, standard deviation, P(sum ≥ v) as a fraction, a table, and a 10,000-roll comparison of observed vs. exact frequencies. See `CHANGELOG.md`.
 
 ## What it is
 
@@ -145,6 +147,14 @@ It needs no build, server or installation: open `index.html` in a modern browser
 
 ### 11 October 2026
 - Accessibility: the Buy Me a Coffee support widget now has a landmark role (`complementary`); axe-core reports 0 violations at 1280 and 360 px. The scripts and the CSP hashes were not modified.
+
+## Status
+
+Stable, version 2.1.0 (2026-10-27). 12 games are playable against the local AI and 14 are atlas-only; the simulator gives exact distributions and probability queries, and the new probability lesson draws them as a histogram. A unified local multiplayer mode is planned, not implemented. Changes: `CHANGELOG.md`.
+
+## Offline
+
+A single file, `index.html`: no CDN, no external fonts or scripts, no tracking, no accounts. A strict CSP blocks network connections; a service worker caches the app for offline start. The probability lesson is computed locally in the page.
 
 ## License
 
