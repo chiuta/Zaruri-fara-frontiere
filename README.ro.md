@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 2.1.0 · **Ultima actualizare:** 2026-10-27
+**Versiune:** 2.2.0 · **Ultima actualizare:** 2026-10-27
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -11,6 +11,8 @@ Atlas de jocuri cu zaruri și partide contra unui AI local — un singur fișier
 **Live:** https://chiuta.github.io/Zaruri-fara-frontiere/
 
 ![Captură: Generala în desfășurare](screenshot.ro.png)
+
+**Nou în 2.2.0:** *Fișe de lucru tipăribile* în fila Simulator (exerciții generate determinist dintr-un număr de bază + nivel, răspunsuri calculate exact, pagină opțională cu barem; **neverificate didactic**). 
 
 **Nou în 2.1.0:** o *Lecție de probabilități* în fila Simulator: histogramă SVG exactă a sumei a n zaruri cu s fețe (numărare cu numere întregi, verificată prin enumerare completă), media, abaterea standard, P(suma ≥ v) ca fracție, un tabel și compararea frecvențelor observate la 10 000 de aruncări cu cele exacte. Vezi `CHANGELOG.md`.
 
@@ -153,7 +155,7 @@ Nu necesită build, server sau instalare: deschide `index.html` într-un browser
 
 ## Stare
 
-Stabil, versiunea 2.1.0 (2026-10-27). 12 jocuri sunt jucabile contra AI-ului local, iar 14 sunt doar în atlas; simulatorul oferă distribuții exacte și interogări de probabilitate, iar noua lecție de probabilități le desenează ca histogramă. Un mod multiplayer local unificat este planificat, nu implementat. Modificări: `CHANGELOG.md`.
+Stabil, versiunea 2.2.0 (2026-10-27). 12 jocuri sunt jucabile contra AI-ului local, iar 14 sunt doar în atlas; simulatorul oferă distribuții exacte și interogări de probabilitate, iar noua lecție de probabilități le desenează ca histogramă. Un mod multiplayer local unificat este planificat, nu implementat. Modificări: `CHANGELOG.md`.
 
 ## Offline
 

@@ -2,6 +2,20 @@
 
 Format: [SemVer](https://semver.org/lang/ro/) MAJOR.MINOR.PATCH. Istoricul versiunilor anterioare se află în secțiunea „Istoric / Changelog” din `README.ro.md`.
 
+## 2.2.0 — 2026-10-27
+
+### Adăugat
+- **Fișe de lucru tipăribile** (fila Simulator, sub „Lecție de probabilități”): număr de bază (0–999999), nivel (1–3) și număr de exerciții (1–30) → aceeași fișă pe orice dispozitiv (`ZFF.worksheet(seed, nivel, număr)`, PRNG mulberry32). Șapte tipuri de întrebări: rezultate posibile, în câte moduri se obține o sumă, P(S ≥ v) ca fracție, suma cea mai frecventă, media, P(cel puțin o dată fața maximă), P(toate zarurile identice). Răspunsurile se calculează exact; butoane „Tipărește fișa” și „Tipărește cu baremul” (barem pe a doua pagină, `@media print`, alb-negru).
+- Textele sunt în 8 limbi (fr/it/es/pt/de/hu: traducere automată, neverificată nativ).
+- Test nou `tests/worksheet.test.mjs` (18 verificări): determinism, **toate răspunsurile verificate prin enumerare brută independentă** (3 niveluri × 5 numere × 30 de exerciții), toate cele 7 tipuri, PDF A4 de 2 pagini, 8 limbi, mobil, 0 cereri de rețea.
+
+### Marcaj onest
+- Fișele **nu au fost revizuite de un cadru didactic** (neverificat didactic); sunt marcate astfel în aplicație și pe foaia tipărită. Corectitudinea matematică a răspunsurilor este verificată prin test; adecvarea pedagogică, nu.
+
+### Neschimbat
+- Offline, fără CDN/urmărire/conturi; hash-urile CSP recalculate. `tests/probability-lesson.test.mjs` (25) și `tests/rules-engine.test.mjs` (57) rămân verzi.
+- „Mod multiplayer local unificat”: **planificat**, nu implementat.
+
 ## 2.1.0 — 2026-10-27
 
 ### Adăugat
