@@ -15,8 +15,8 @@
   "storageKeys": [
     "zaruri-fara-frontiere.state"
   ],
-  "sizeBytes": 703732,
-  "sha256": "abcc9b49968e39e9e573d5055d21c259383318efdec11fba783e6de6e9c7c774",
+  "sizeBytes": 844166,
+  "sha256": "904a070415728906a245cbf7264dc28cbc94e9ff1abb196a334fa368961f1fa1",
   "csp": {
     "present": true,
     "directives": {
@@ -54,7 +54,11 @@
       "store",
       "dialog",
       "label",
-      "bundle"
+      "bundle",
+      "qr",
+      "p2p",
+      "sync",
+      "history"
     ]
   },
   "kit": {
@@ -64,7 +68,11 @@
       "store",
       "dialog",
       "label",
-      "bundle"
+      "bundle",
+      "qr",
+      "p2p",
+      "sync",
+      "history"
     ]
   },
   "selfSerializing": false,
