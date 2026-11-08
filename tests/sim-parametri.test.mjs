@@ -1,0 +1,23 @@
+// Zaruri: expresia și numărul de aruncări din simulator se păstrează în starea salvată. Rulare: PW_ROOT=/opt/npm-tools/ node tests/sim-parametri.test.mjs
+import {createRequire} from 'module';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const require = createRequire(process.env.PW_ROOT ? process.env.PW_ROOT.replace(/\/?$/, '/') + 'x.js' : import.meta.url);
+const {chromium} = require('playwright');
+const URL_APP = 'file://' + path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'index.html');
+let pass = 0, fail = 0;
+const ok = (c, n, i) => { if (c) { pass++; console.log('  ok   ' + n); } else { fail++; console.log('  FAIL ' + n + (i === undefined ? '' : ' ' + JSON.stringify(i))); } };
+const browser = await chromium.launch({executablePath: process.env.CHROMIUM_PATH || undefined, args: ['--no-sandbox']});
+const ctx = await browser.newContext({locale: 'ro-RO'});
+await ctx.route(/^https?:/, (r) => r.abort());
+const page = await ctx.newPage(); const errs = [];
+page.on('pageerror', (e) => errs.push(e.message));
+await page.addInitScript(() => { try { if (!localStorage.getItem('zaruri-fara-frontiere.state')) localStorage.setItem('zaruri-fara-frontiere.state', JSON.stringify({lang: 'ro', simExpr: '4d8+2', simQty: 7})); } catch (e) {} });
+await page.goto(URL_APP); await page.waitForTimeout(800);
+ok(await page.evaluate(() => window.ZFF_UI.App.simExpr === '4d8+2' && window.ZFF_UI.App.simQty === 7), 'încărcare: expresia și numărul din starea salvată');
+await page.evaluate(() => { window.ZFF_UI.App.simExpr = '2d10'; window.ZFF_UI.App.simQty = 3; window.ZFF_UI.save(); });
+const st = await page.evaluate(() => JSON.parse(localStorage.getItem('zaruri-fara-frontiere.state')));
+ok(st.simExpr === '2d10' && st.simQty === 3, 'salvare: simExpr și simQty în starea salvată', st);
+ok(errs.length === 0, 'fără erori', errs);
+await browser.close();
+console.log(`\n${pass} reușite, ${fail} eșuate`); process.exit(fail ? 1 : 0);

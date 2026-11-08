@@ -33,3 +33,7 @@ Format: [SemVer](https://semver.org/lang/ro/) MAJOR.MINOR.PATCH. Istoricul versi
 ### Neschimbat
 - Offline: un singur `index.html`, fără CDN, fără urmărire, fără conturi. Hash-urile CSP ale scripturilor inline au fost recalculate. `tests/rules-engine.test.mjs`: 57 ok / 0 fail, înainte și după.
 - „Mod multiplayer local unificat”: **planificat**, nu implementat.
+
+## 2.2.3 — 2026-11-08
+
+- Simulatorul păstrează în starea salvată expresia și numărul de aruncări (reproducerea experimentelor); test `sim-parametri`.
