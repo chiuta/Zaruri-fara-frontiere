@@ -1,4 +1,4 @@
-// Teste v2.2.1 — fișe de lucru tipăribile. Rulare: PW_ROOT=/opt/npm-tools/ node tests/worksheet.test.mjs
+// Teste v2.2.2 — fișe de lucru tipăribile. Rulare: PW_ROOT=/opt/npm-tools/ node tests/worksheet.test.mjs
 import {createRequire} from 'module';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
