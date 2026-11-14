@@ -10,18 +10,19 @@
     "clipboard",
     "serviceWorker",
     "localStorage",
-    "Web Crypto"
+    "Web Crypto",
+    "WebGL"
   ],
   "storageKeys": [
     "zaruri-fara-frontiere.state"
   ],
-  "sizeBytes": 898708,
-  "sha256": "222cf3d6d401d942fdf979d0b5ea63e1d2126bbef2e9119f88599809695e3bbc",
+  "sizeBytes": 950383,
+  "sha256": "8731a23342b7c3c42a170b1fd37f8ccea5218ece015a48eabfa2533a18d8b6e0",
   "csp": {
     "present": true,
     "directives": {
       "default-src": "'none'",
-      "script-src": "sha256×5",
+      "script-src": "sha256×6",
       "style-src": "'unsafe-inline'",
       "img-src": "'self' data:",
       "base-uri": "'none'",
