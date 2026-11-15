@@ -2,7 +2,7 @@
   "schema": 1,
   "slug": "zaruri-fara-frontiere",
   "name": "Zaruri fără frontiere — atlas de jocuri cu zaruri",
-  "version": "2.2.8",
+  "version": "2.3.0",
   "updated": "2026-11-15",
   "description": "Atlas de jocuri cu zaruri cu jocuri jucabile contra AI local: Generala, 10000, Zarul mincinos, Craps, Pig și altele. Offline, fără telemetrie.",
   "egress": [],
@@ -16,8 +16,8 @@
   "storageKeys": [
     "zaruri-fara-frontiere.state"
   ],
-  "sizeBytes": 955671,
-  "sha256": "436e7a6eb558f3b2ba000d5990492184f65594b2ddf119515c61af3bd95016a2",
+  "sizeBytes": 993693,
+  "sha256": "7659aaedbcff24e968375b602cb5fe7048f1bc2dadef0ab262a9bd90d0ae49ea",
   "csp": {
     "present": true,
     "directives": {
@@ -56,6 +56,7 @@
       "dialog",
       "exit",
       "view",
+      "a11y",
       "ux",
       "label",
       "bundle",
@@ -66,13 +67,14 @@
     ]
   },
   "kit": {
-    "version": "1.5.0",
+    "version": "1.6.0",
     "modules": [
       "core",
       "store",
       "dialog",
       "exit",
       "view",
+      "a11y",
       "ux",
       "label",
       "bundle",
